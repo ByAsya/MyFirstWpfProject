@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="MyProject.Profile"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="760"
+             Background="Transparent">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="190"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.RowSpan="11" Margin="0,0,0.4,-60.2" Fill="#dcc6b3" Opacity="0.7"/>
+        <Border Grid.RowSpan="3" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="130" Height="130">
+            <Border.Background>
+                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+            </Border.Background>
+        </Border>
+        <TextBlock Grid.Row="3" Name="name" Text="пусто" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="30" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="3" Name="mail" Text="mail" TextAlignment="Center" FontSize="16" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
+        <materialDesign:PackIcon Kind="Teach" Grid.Row="5" Foreground="White" HorizontalAlignment="Left" Height="24" Width="20" VerticalAlignment="Center" Margin="36,10.6,0,15.8"/>
+        <TextBlock Name="topics" Grid.Row="5" Text="Курсы: " Foreground="White" FontFamily="Verdana" FontSize="20" HorizontalAlignment="Center" Height="30" Margin="61,10.6,30.4,9.8" Width="99"/>
+        <Button Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Click="Redact_Click" Margin="0,0.2,0.4,49.4" Grid.RowSpan="2">
+            <Grid>
+                <materialDesign:PackIcon Kind="Pencil" Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,-0.8" Grid.RowSpan="2" Height="24" Width="20"/>
+                <TextBlock Text="Настроить" Foreground="White" FontFamily="Verdana" FontSize="20" VerticalAlignment="Center" Margin="35 0 0 0"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="7" Background="Transparent" BorderBrush="Transparent" Click="Exit_Click">
+            <Grid>
+                <materialDesign:PackIcon Kind="DoorOpen" Foreground="White" HorizontalAlignment="Left" Margin="-20,0,0,0" Height="24" Width="20"/>
+                <TextBlock Text="Выход" Foreground="White" FontFamily="Verdana" FontSize="20" VerticalAlignment="Center" Margin="7,0,10.2,-1"/>
+            </Grid>
+        </Button>
+        <Button Grid.Row="8" Background="Transparent" BorderBrush="Transparent" Click="Delete_Click">
+            <Grid>
+                <materialDesign:PackIcon Kind="Delete" Foreground="White" HorizontalAlignment="Left" Margin="-13,0,0,0" Height="24" Width="20"/>
+                <TextBlock Text="Удалить" Foreground="White" FontFamily="Verdana" FontSize="20" VerticalAlignment="Center" Margin="15,0,-0.6,0"/>
+            </Grid>
+        </Button>
+
+        <Grid Name="Redact" Grid.RowSpan="11" Margin="0,0,0,-41.2" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Rectangle Grid.RowSpan="8" Grid.Column="0" Grid.ColumnSpan="5" Fill="White" Opacity="0.5" Margin="0,0,-0.4,-41"/>
+            <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Очередь и Стек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Дерево и граф" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Список и дек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8" Height="100"/>
+            <TextBlock Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Сортировки" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+        </Grid>
+    </Grid>
+</UserControl>
