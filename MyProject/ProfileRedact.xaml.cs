@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,30 @@ namespace MyProject
         public ProfileRedact()
         {
             InitializeComponent();
+        }
+        
+        private void Redact_Click(object sender, RoutedEventArgs e)
+        {
+            User user = new User();
+            UserRepository userR = new UserRepository();
+            Вход_Регистрация input = new Вход_Регистрация();
+            Profile profile = new Profile();
+            var redactUser = userR.Get(input.mail1.Text);
+
+            if (input.mail1==null)
+            {
+                redactUser = userR.Get(input.mail2.Text);
+            }
+            
+            redactUser.Id = mail.Text;
+            redactUser.name = name.Text;
+            redactUser.password = pass.Password;
+
+            profile.mail.Text = redactUser.Id;
+            profile.name.Text = redactUser.name;
+
+            MessageBox.Show("Данные изменены!");
+            this.Close();
         }
     }
 }
