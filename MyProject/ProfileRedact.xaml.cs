@@ -27,23 +27,24 @@ namespace MyProject
         
         private void Redact_Click(object sender, RoutedEventArgs e)
         {
-            User user = new User();
-            UserRepository userR = new UserRepository();
-            Вход_Регистрация input = new Вход_Регистрация();
             Profile profile = new Profile();
-            var redactUser = userR.Get(input.mail1.Text);
+            UserRepository userR = new UserRepository();
+            var user_ = userR.Get(ProfileId.mail);
 
-            if (input.mail1==null)
-            {
-                redactUser = userR.Get(input.mail2.Text);
-            }
-            
-            redactUser.Id = mail.Text;
-            redactUser.name = name.Text;
-            redactUser.password = pass.Password;
+            userR.Delete(user_);
 
-            profile.mail.Text = redactUser.Id;
-            profile.name.Text = redactUser.name;
+            User user = new User { Id = Mail.Text, name = Name.Text, password = Pass.Password };
+            userR.Create(user);
+
+            ProfileId.mail = Mail.Text;
+            ProfileId.name = Name.Text;
+
+            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            Начало_обучения n = new Начало_обучения();
+            n.Block.Children.Clear();
+            Profile p = new Profile();
+            n.AnotherPages.Children.Add(p);
+            w.Start.Children.Add(n);
 
             MessageBox.Show("Данные изменены!");
             this.Close();

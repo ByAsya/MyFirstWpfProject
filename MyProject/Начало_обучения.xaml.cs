@@ -50,6 +50,7 @@ namespace MyProject
             AnotherPages.Children.Clear();
             Block.Children.Clear();
             Profile profile = new Profile();
+
             AnotherPages.Children.Add(profile);
         }
 

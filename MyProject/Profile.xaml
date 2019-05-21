@@ -7,7 +7,8 @@
              xmlns:local="clr-namespace:MyProject"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="760"
-             Background="Transparent">
+             Background="Transparent"
+             Loaded="Load_Click">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -34,8 +35,8 @@
                 <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
             </Border.Background>
         </Border>
-        <TextBlock Grid.Row="3" Name="name" Text="пусто" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="30" VerticalAlignment="Top"/>
-        <TextBlock Grid.Row="3" Name="mail" Text="mail" TextAlignment="Center" FontSize="16" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
+        <TextBlock Grid.Row="3" Name="name" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="30" VerticalAlignment="Top"/>
+        <TextBlock Grid.Row="3" Name="mail" TextAlignment="Center" FontSize="16" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
         <materialDesign:PackIcon Kind="Teach" Grid.Row="5" Foreground="White" HorizontalAlignment="Left" Height="24" Width="20" VerticalAlignment="Center" Margin="36,10.6,0,15.8"/>
         <TextBlock Name="topics" Grid.Row="5" Text="Курсы: " Foreground="White" FontFamily="Verdana" FontSize="20" HorizontalAlignment="Center" Height="30" Margin="61,10.6,30.4,9.8" Width="99"/>
         <Button Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Click="Redact_Click" Margin="0,0.2,0.4,49.4" Grid.RowSpan="2">

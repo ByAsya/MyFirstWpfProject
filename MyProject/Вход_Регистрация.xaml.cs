@@ -37,11 +37,7 @@ namespace MyProject
             n.AnotherPages.Children.Add(p);
             w.Start.Children.Add(n);
 
-            var thisUser = userR.Get(mail1.Text);
-            User user = new User();
-            p.name.Text =thisUser.name;
-            p.mail.Text = mail1.Text;
-            p.topics.Text += thisUser.t_count;
+            ProfileId.mail = mail1.Text;
             this.Close();
         }
 
@@ -57,8 +53,8 @@ namespace MyProject
             Profile p = new Profile();
             n.AnotherPages.Children.Add(p);
             w.Start.Children.Add(n);
-            p.name.Text= name2.Text;
-            p.mail.Text= mail2.Text;
+
+            ProfileId.mail = mail2.Text;
 
             this.Close();
         }

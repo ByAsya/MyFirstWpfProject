@@ -26,6 +26,18 @@ namespace MyProject
             InitializeComponent();
         }
 
+        private void Load_Click(object sender, RoutedEventArgs e)
+        {
+            mail.Text = ProfileId.mail;
+
+            UserRepository userR = new UserRepository();
+            var user=userR.Get(mail.Text);
+
+            name.Text = user.name;
+            topics.Text += user.t_count;
+        }
+
+
         private void Delete_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult result = MessageBox.Show("Вы точно хотите удалить аккаунт?", 
