@@ -81,14 +81,17 @@
     <Compile Include="ProfileRedact.xaml.cs">
       <DependentUpon>ProfileRedact.xaml</DependentUpon>
     </Compile>
-    <Compile Include="QueueList.xaml.cs">
-      <DependentUpon>QueueList.xaml</DependentUpon>
+    <Compile Include="RememberPass.xaml.cs">
+      <DependentUpon>RememberPass.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Sort.xaml.cs">
-      <DependentUpon>Sort.xaml</DependentUpon>
+    <Compile Include="SignIn.xaml.cs">
+      <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StackDack.xaml.cs">
-      <DependentUpon>StackDack.xaml</DependentUpon>
+    <Compile Include="SignUp.xaml.cs">
+      <DependentUpon>SignUp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StudyTopic.xaml.cs">
+      <DependentUpon>StudyTopic.xaml</DependentUpon>
     </Compile>
     <Compile Include="Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
@@ -96,9 +99,7 @@
     <Compile Include="Study.xaml.cs">
       <DependentUpon>Study.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TreeGraph.xaml.cs">
-      <DependentUpon>TreeGraph.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="Topics.cs" />
     <Compile Include="Sign.xaml.cs">
       <DependentUpon>Sign.xaml</DependentUpon>
     </Compile>
@@ -129,15 +130,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="QueueList.xaml">
+    <Page Include="RememberPass.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sort.xaml">
+    <Page Include="SignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StackDack.xaml">
+    <Page Include="SignUp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StudyTopic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -146,10 +151,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Study.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TreeGraph.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,7 +196,9 @@
     <Resource Include="pictures\e4b5d565fd6106c79f236f3109f441c1.jpg" />
     <Resource Include="pictures\semin-intensive-english-course-nese.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="TopicsText\" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="pictures\gsr4.jpg" />
     <Resource Include="pictures\thumb__1400x0_0_0_crop.jpg" />

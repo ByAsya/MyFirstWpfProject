@@ -25,9 +25,10 @@ namespace MyProject
             InitializeComponent();
         }
 
+        public Sign sign;
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            Sign sign = new Sign();
+            sign = new Sign();
             sign.Show();
         }
 

@@ -16,42 +16,39 @@ using System.Windows.Shapes;
 namespace MyProject
 {
     /// <summary>
-    /// Логика взаимодействия для StackDack.xaml
+    /// Логика взаимодействия для QueueList.xaml
     /// </summary>
-    public partial class StackDack : UserControl
+    public partial class StudyTopic : UserControl
     {
-        public StackDack()
+        public StudyTopic()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Example.Opacity = 0.7;
-            Topic.Opacity = 1;
-            Task.Opacity = 0.7;
-
-            Text.Text = null;
+            example.Opacity = 0.7;
+            topic.Opacity = 1;
+            task.Opacity = 0.7;
+            Text.Text = Topic.text;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Example.Opacity = 1;
-            Topic.Opacity = 0.7;
-            Task.Opacity = 0.7;
-
-            Text.Text = null;
-            Text.Text += "Примеры:";
+            example.Opacity =1;
+            topic.Opacity = 0.7;
+            task.Opacity = 0.7;
+            
+            Text.Text= Topic.example;
         }
 
         private void Task_Click(object sender, RoutedEventArgs e)
         {
-            Example.Opacity = 0.7;
-            Topic.Opacity = 0.7;
-            Task.Opacity = 1;
-
-            Text.Text = null;
-            Text.Text += "Задания:";
+            example.Opacity = 0.7;
+            topic.Opacity = 0.7;
+            task.Opacity = 1;
+            
+            Text.Text= Topic.task;
         }
     }
 }

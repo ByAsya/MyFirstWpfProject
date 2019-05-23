@@ -58,7 +58,7 @@
                 <TextBlock Text="Топ-4" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" FontSize="20" Margin="32,0,0,-0.2" />
             </Grid>
         </Button>
-        <Button Grid.Column="3" Grid.Row="10" Height="50" Background="#dcc6b3" Click="Button_Click" Margin="0,0,0,0.4" HorizontalAlignment="Left" Width="150">
+        <Button Grid.Column="3" Grid.Row="10" Height="50" Background="#dcc6b3" Click="ExitProfile_Click" Margin="0,0,0.4,0.4">
             <Grid>
                 <materialDesign:PackIcon Kind="Door" Foreground="White" Height="Auto" Width="Auto" VerticalAlignment="Center" Margin="0,0,90,0"/>
                 <TextBlock Text="Выход" VerticalAlignment="Bottom" HorizontalAlignment="Left" Foreground="White" FontSize="20" Margin="30,0,0,-0.2" />
@@ -93,11 +93,10 @@
             <Rectangle Fill="#dcc6b3" Opacity="0.5" Grid.RowSpan="9"/>
 
             <TextBlock Grid.Row="0" Height="30" VerticalAlignment="Top" Text="Наши курсы" TextAlignment="Center" FontSize="20" Foreground="White" FontFamily="Verdana"/>
-            <Button Grid.Row="1" Grid.RowSpan="3" Width="130" Height="110" Background="White" BorderBrush="Transparent" Content="О" FontSize="50" FontFamily="Verdana" Click="Button_Click_3" ToolTip="Очередь и стек"/>
-            <Button Grid.Row="5" Grid.RowSpan="3" Width="130" Height="110" Background="White" BorderBrush="Transparent" Content="Д" FontSize="50" FontFamily="Verdana" Click="Button_Click_4" ToolTip="Дерево и граф"/>
-            <Button Grid.Row="9" Height="30" VerticalAlignment="Bottom" Background="Transparent" BorderBrush="Transparent" Click="Button_Click_2" Content="все" Foreground="White" FontFamily="Verdana" FontSize="20"/>
+            <Button Grid.Row="1" Grid.RowSpan="3" Width="130" Height="110" Background="White" BorderBrush="Transparent" Content="О" FontSize="50" FontFamily="Verdana" Click="QS_Click" ToolTip="Очередь и стек"/>
+            <Button Grid.Row="5" Grid.RowSpan="3" Width="130" Height="110" Background="White" BorderBrush="Transparent" Content="Д" FontSize="50" FontFamily="Verdana" Click="TG_Click" ToolTip="Дерево и граф"/>
+            <Button Grid.Row="9" Height="30" VerticalAlignment="Bottom" Background="Transparent" BorderBrush="Transparent" Click="AllCourses_Click" Content="все" Foreground="White" FontFamily="Verdana" FontSize="20"/>
         </Grid>
-        <Grid Name="AnotherPages" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="11"  Margin="0,0,0,-40.8"/>
-        <Grid Name="ProfilePage" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="11"  Margin="0,0,0,-40.8"/>
+        <Grid Name="AnotherPages" Grid.ColumnSpan="3" Grid.Row="1" Grid.RowSpan="12" Margin="0 0 0 -38" />
     </Grid>
 </UserControl>

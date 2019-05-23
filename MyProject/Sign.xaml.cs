@@ -25,108 +25,35 @@ namespace MyProject
             InitializeComponent();
 
         }
-
-        UserRepository userR = new UserRepository();
-
+        
         private void Input_Click(object sender, RoutedEventArgs e)
         {
+            In.Foreground.Opacity = 1;
+            Up.Foreground.Opacity = 0.7;
+            InUp.Children.Clear();
+
+            SignIn sign = new SignIn();
+            InUp.Children.Add(sign);
             
-            if (mail1.Text == String.Empty || pass1.Password == String.Empty)
-            {
-                MessageBox.Show("Заполните все поля!");
-            }            
-
-            else
-            {
-                MainWindow w = (MainWindow)Application.Current.MainWindow;
-                StartLearn n = new StartLearn();
-                n.Block.Children.Clear();
-                Profile p = new Profile();
-
-                try
-                {
-                    string mail = mail1.Text;
-
-                    UserRepository userR = new UserRepository();
-                    var user = userR.Get(mail);
-
-                    if(pass1.Password.GetHashCode().ToString()!=user.password)
-                    {
-                        pass1.BorderBrush = Brushes.Red;
-                        MessageBox.Show("Неверный пароль!");
-                    }
-                    
-                    else
-                    {
-                        ProfileId.mail = user.Id;
-                        ProfileId.name = user.name;
-                        ProfileId.count = user.t_count;
-
-                        this.Close();
-
-                        n.AnotherPages.Children.Add(p);
-                        w.Start.Children.Add(n);
-                    }                    
-                }
-
-                catch(Exception)
-                {
-                    mail1.BorderBrush = Brushes.Red;
-                    pass1.BorderBrush = Brushes.Red;
-                    MessageBox.Show("Неверный логин или пароль!");
-                }               
-                
-            }
         } 
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
-           
-            MainWindow w = (MainWindow)Application.Current.MainWindow;
-            StartLearn n = new StartLearn();
-            n.Block.Children.Clear();
-            Profile p = new Profile();
+            Up.Foreground.Opacity = 1;
+            In.Foreground.Opacity = 0.7;
+            InUp.Children.Clear();
 
-            if (mail2.Text == String.Empty || name2.Text==String.Empty||pass2.Password==String.Empty)
-            {
-                MessageBox.Show("Заполните все поля!");
-            }
+            SignUp sign = new SignUp();
+            InUp.Children.Add(sign);
+        }
 
-            else
-            {
-                try
-                {
-                    string mail_ = mail2.Text;
-                    string[] chekS = mail_.Split(new char[] { '@' });
-                    string check = chekS.Last();
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            In.Foreground.Opacity = 1;
+            Up.Foreground.Opacity = 0.7;
 
-                    if (check == "gmail.com" || check == "mail.ru")
-                    {
-                        User user = new User { Id = mail2.Text, name = name2.Text, password = pass2.Password.GetHashCode().ToString() };
-                        userR.Create(user);
-
-                        ProfileId.mail = user.Id;
-                        ProfileId.name = user.name;
-                        ProfileId.count = user.t_count;
-                        ProfileId.password = user.password;
-
-                        MessageBox.Show("Регистрация выполнена успешно!");
-                        this.Close();
-
-                        n.AnotherPages.Children.Add(p);
-                        w.Start.Children.Add(n);
-                    }
-
-                    else
-                        MessageBox.Show("Неправильный формат почты!" + Environment.NewLine + "Пример:kkk@mail.ru, kkk@gmai.com");
-
-                }
-
-                catch (Exception)
-                {
-                    MessageBox.Show("Данная почта уже использована!");
-                }
-            }            
+            SignIn sign = new SignIn();
+            InUp.Children.Add(sign);
         }
     }
 }

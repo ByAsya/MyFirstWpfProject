@@ -11,11 +11,11 @@
         ResizeMode="NoResize"
         WindowStyle="None"
         BorderBrush="Gray"
-        BorderThickness="1">
+        BorderThickness="2">    
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="40"/>
-            <RowDefinition Height="110"/>
+            <RowDefinition Height="130"/>
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition Height="160"/>
@@ -37,14 +37,14 @@
         
         <Grid Grid.Row="1" Grid.Column="1">
             <Rectangle Fill="#dcc6b3" RadiusX="3" RadiusY="3" Opacity="0.5"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" FontFamily="Verdana" FontSize="20" TextAlignment="Center" Foreground="White" VerticalAlignment="Center">
-            Hi! Our courses about<LineBreak/>
-            main programming algorithms
-            <LineBreak/>like queue, tree, list end etc.
-            <LineBreak/>Let't study together!
+            <TextBlock TextWrapping="Wrap" Grid.Row="1" Grid.Column="1" FontFamily="Verdana" FontSize="20" TextAlignment="Center" Foreground="White" VerticalAlignment="Center">
+            Здравствуйте! Наши курсы о
+            главных алгоритмах программирования:
+            очередях, деревьях, списках и т.д.
+            Давайте учиться вместе!
             </TextBlock>
         </Grid>
-        <Button Grid.Row="3" Grid.Column="3" FontFamily="Verdana" FontSize="20" Height="50" Background="#dcc6b3" Content="Go!" Click="Start_Click" Foreground="White"/>
+        <Button Grid.Row="3" Grid.Column="3" FontFamily="Verdana" FontSize="20" Height="50" Background="#dcc6b3" Content="Начнем!" Click="Start_Click" Foreground="White"/>
         <Grid Name="Start" Grid.ColumnSpan="5" Grid.RowSpan="5"/>
     </Grid>
 

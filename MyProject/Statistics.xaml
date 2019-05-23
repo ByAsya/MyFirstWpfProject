@@ -23,7 +23,7 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4" Fill="White" Opacity="0.7" Margin="0,0,0,-17.6"/>
+        <Rectangle Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4" Fill="White" Opacity="0.5" Margin="0,0,0,-8"/>
         <Border Grid.Row="1" Grid.Column="1" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <Border.Background>
                 <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>

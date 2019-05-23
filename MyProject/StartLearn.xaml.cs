@@ -29,7 +29,7 @@ namespace MyProject
         }
 
         
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ExitProfile_Click(object sender, RoutedEventArgs e)
         {
             if (Icon.Kind == PackIconKind.Bell)
             {
@@ -99,7 +99,7 @@ namespace MyProject
             AnotherPages.Children.Add(study);
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        private void AllCourses_Click(object sender, RoutedEventArgs e)
         {
             Study st = new Study();
             Block.Children.Clear();
@@ -107,28 +107,48 @@ namespace MyProject
             AnotherPages.Children.Add(st);
         }
 
-        private void Button_Click_3(object sender, RoutedEventArgs e)
+        private void QS_Click(object sender, RoutedEventArgs e)
         {
             Study st = new Study();
             Block.Children.Clear();
             AnotherPages.Children.Clear();
+            st.topics.Children.Clear();
             AnotherPages.Children.Add(st);
 
-            QueueList ql = new QueueList();
-            st.Text.Children.Clear();
-            st.Topics.Children.Add(ql);
+            StudyTopic ql = new StudyTopic();
+            st.topics.Children.Clear();
+
+            Topic.name = "Один";
+            Topic.text = "ТекстОдин";
+            Topic.example = "Пример1";
+            Topic.task = "Задание1";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+
+            st.topics.Children.Add(ql);
         }
 
-        private void Button_Click_4(object sender, RoutedEventArgs e)
+        private void TG_Click(object sender, RoutedEventArgs e)
         {
             Study st = new Study();
             Block.Children.Clear();
             AnotherPages.Children.Clear();
+            st.topics.Children.Clear();
             AnotherPages.Children.Add(st);
 
-            TreeGraph ql = new TreeGraph();
-            st.Text.Children.Clear();
-            st.Topics.Children.Add(ql);
+            StudyTopic ql = new StudyTopic();
+            st.topics.Children.Clear();
+
+            Topic.name = "Два";
+            Topic.text = "ТекстДва";
+            Topic.example = "Пример2";
+            Topic.task = "Задание2";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+
+            st.topics.Children.Add(ql);
         }
 
         private void MailStat_Click(object sender, RoutedEventArgs e)

@@ -7,6 +7,9 @@
              xmlns:local="clr-namespace:MyProject"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="760">
+
+
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -20,6 +23,7 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="50"/>
             <RowDefinition Height="60"/>
+            <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="220"/>
@@ -27,9 +31,9 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.RowSpan="11" Margin="0,0,0,-62.2" Fill="#dcc6b3" Opacity="0.7"/>
+        <Rectangle Grid.Column="0" Grid.RowSpan="12" Fill="#dcc6b3" Opacity="0.7" Margin="0 0 0 -8"/>
         <TextBlock Grid.Row="1" Text="Все курсы:" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
-        <Button Grid.Row="3" Height="50" Background="Transparent" BorderBrush="Transparent" Click="QL_Click" HorizontalAlignment="Right" Margin="0,0.2" Width="220">
+        <Button Grid.Row="3" Height="50" Background="Transparent" BorderBrush="Transparent" Click="QL_Click" Margin="0,0.2">
             <Grid>
                 <materialDesign:PackIcon Kind="Done" Height="30" Width="30" Foreground="White" Margin="0,0,130,0"/>
                 <TextBlock Text="Стек и очередь" Height="23" TextAlignment="Center" FontSize="18" Foreground="White" FontFamily="Verdana" Width="144" Margin="40,0,0,0"/>
@@ -53,31 +57,25 @@
                 <TextBlock Text="Сортировка" Height="23" FontSize="18" Foreground="White" FontFamily="Verdana" Width="144" Margin="40,0,0,0" TextAlignment="Left"/>
             </Grid>
         </Button>
+        <Rectangle Fill="White" Opacity="0.8" Grid.RowSpan="12" Grid.Column="1" Margin="0 0 0 -8"/>
 
-        <Grid Name="Text" Grid.RowSpan="11" Grid.Column="1" Margin="0,0,0,-41.2">
-            <Rectangle Fill="White" Opacity="0.8" Margin="0,0,0,-26"/>
-            <TextBlock Width="470" Height="450" Foreground="Black" FontFamily="Verdana" FontSize="20">
-            Под динамической структурой данных
-            <LineBreak/>понимается любая структура данных, 
-            <LineBreak/>занимаемый объем памяти которой не
-            <LineBreak/>является фиксированным. Иными словами, 
-            <LineBreak/> подобной структуре может храниться как 
-            <LineBreak/>два, пять, двадцать элементов, так и одно 
-            <LineBreak/>большое ничего. Размер подобной структу-
-            <LineBreak/>ры ограничен только объемом оперативной
-            <LineBreak/>памяти компьютера.
-            <LineBreak/>Динамические структуры данных бывают 
-            <LineBreak/>линейные и нелинейные.К линейным струк-
-            <LineBreak/>турам относятся списки (односвязные, двух-
-            <LineBreak/>связные, кольцевые), стеки, очереди (одно-
-            <LineBreak/>сторонние, двухсторонние, очереди с прио-
-            <LineBreak/>ритетами). Нелинейные структуры представ-
-            <LineBreak/>ляются, как правило, в виде дерева (каж-
-            <LineBreak/>дый элемент имеет некоторое количество
-            <LineBreak/>связей.
-            </TextBlock>
+        <Grid Name="topics" Grid.RowSpan="12" Grid.Column="1" Margin="0 0 0 -8">
+            <ScrollViewer>
+                <TextBlock TextWrapping="Wrap" FontSize="20">
+                    ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    <LineBreak/>
+                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
+                </TextBlock>
+            </ScrollViewer>
         </Grid>
-
-        <Grid Name="Topics" Grid.RowSpan="11" Grid.Column="1"  Margin="0,0,0,-41.2"/>
     </Grid>
+
 </UserControl>

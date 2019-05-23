@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="MyProject.SignIn"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyProject"
+             mc:Ignorable="d" 
+             d:DesignHeight="209" d:DesignWidth="400"
+             Background="White">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition Height="55"/>
+            <RowDefinition/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+
+        <TextBox Name="mail1" Grid.Row="1" Height="40" Width="200" materialDesign:HintAssist.Hint="@mail" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <PasswordBox Name="pass1" Grid.Row="2" Height="40" Width="200" materialDesign:HintAssist.Hint="пароль" VerticalAlignment="Bottom" Style="{StaticResource MaterialDesignFloatingHintPasswordBox}"/>
+        <Button Grid.Row="3" VerticalAlignment="Bottom" Width="200" Height="40" Background="#dcc6b3" Content="Вход" Foreground="White" FontSize="16" FontFamily="Verdana" Click="Input_Click"/>
+        <Button Grid.Row="4" Background="Transparent" BorderBrush="Transparent" Content="Забыли пароль?" Height="25" Width="140" Foreground="Gray" FontFamily="Vrdana" FontSize="12" Click="Button_Click"/>
+        <Grid Name="rpassword" Grid.RowSpan="6"/>
+    </Grid>
+</UserControl>

@@ -25,32 +25,62 @@ namespace MyProject
             InitializeComponent();
         }
 
+        StudyTopic ql = new StudyTopic();
+
         private void QL_Click(object sender, RoutedEventArgs e)
         {
-            QueueList ql = new QueueList();
-            Text.Children.Clear();
-            Topics.Children.Add(ql);
+            topics.Children.Clear();
+            Topic.name = "Один";
+            Topic.text = "ТекстОдин";
+            Topic.example = "Пример1";
+            Topic.task = "Задание1";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+            
+            topics.Children.Add(ql);
         }
         
         private void TG_Click(object sender, RoutedEventArgs e)
         {
-            TreeGraph tg = new TreeGraph();
-            Text.Children.Clear();
-            Topics.Children.Add(tg);
+            topics.Children.Clear();
+            Topic.name = "Два";
+            Topic.text = "ТекстДва";
+            Topic.example = "Пример2";
+            Topic.task = "Задание2";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+
+            topics.Children.Add(ql);
         }
 
         private void DS_Click(object sender, RoutedEventArgs e)
         {
-            StackDack ds = new StackDack();
-            Text.Children.Clear();
-            Topics.Children.Add(ds);
+            topics.Children.Clear();
+            Topic.name = "Три";
+            Topic.text = "ТекстТри";
+            Topic.example = "Пример3";
+            Topic.task = "Задание3";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+
+            topics.Children.Add(ql);
         }
 
         private void Sort_Click(object sender, RoutedEventArgs e)
         {
-            Sort sort = new Sort();
-            Text.Children.Clear();
-            Topics.Children.Add(sort);
+            topics.Children.Clear();
+            Topic.name = "Четыре";
+            Topic.text = "Текст4";
+            Topic.example = "Пример4";
+            Topic.task = "Задание4";
+
+            ql.TextName.Text = Topic.name;
+            ql.Text.Text = Topic.text;
+
+            topics.Children.Add(ql);
         }
     }
 }
