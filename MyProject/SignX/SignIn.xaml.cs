@@ -66,11 +66,26 @@ namespace MyProject
                         ProfileId.name = user.name;
                         ProfileId.count = user.t_count;
 
+                        string mailAdmin = "sakunnastya28@gmail.com";
+
+                        if (user.Id == mailAdmin)
+                        {
+                            Admin admin = new Admin();
+                            Study study = new Study();
+                            n.AdminPage.Children.Clear();
+                            n.AnotherPages.Children.Add(study);
+                            n.Admin.Children.Add(admin);
+                            w.Start.Children.Add(n);
+                        }
+
+                        else
+                        {
+                            n.AnotherPages.Children.Add(p);
+                            w.Start.Children.Add(n);
+                        }
+
                         MainWindow window = (MainWindow)Application.Current.MainWindow;
                         window.sign.Close();
-
-                        n.AnotherPages.Children.Add(p);
-                        w.Start.Children.Add(n);
                     }
                 }
 

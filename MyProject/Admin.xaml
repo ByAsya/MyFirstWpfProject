@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyProject"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="190">
+             d:DesignHeight="380" d:DesignWidth="160">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -16,17 +16,14 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="50"/>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="50"/>
-            <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
 
-        <Button Grid.Row="1" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
-        <Button Grid.Row="3" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
-        <Button Grid.Row="5" Height="50" Background="#dcc6b3" Content="Удалить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
+        <Button HorizontalAlignment="Center" Grid.Row="1" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
+        <Button HorizontalAlignment="Center" Grid.Row="3" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
+        <Button HorizontalAlignment="Center" Grid.Row="5" Height="50" Background="#dcc6b3" Content="Выход" Foreground="White" FontFamily="Verdana" FontSize="20"/>
     </Grid>
 </UserControl>

@@ -74,43 +74,43 @@
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="database\Data.cs" />
-    <Compile Include="Profile.xaml.cs">
+    <Compile Include="ProfileX\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProfileId.cs" />
-    <Compile Include="ProfileRedact.xaml.cs">
+    <Compile Include="ProfileX\ProfileId.cs" />
+    <Compile Include="ProfileX\ProfileRedact.xaml.cs">
       <DependentUpon>ProfileRedact.xaml</DependentUpon>
     </Compile>
-    <Compile Include="RememberPass.xaml.cs">
+    <Compile Include="SignX\RememberPass.xaml.cs">
       <DependentUpon>RememberPass.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SignIn.xaml.cs">
+    <Compile Include="SignX\SignIn.xaml.cs">
       <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SignUp.xaml.cs">
+    <Compile Include="SignX\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudyTopic.xaml.cs">
+    <Compile Include="StudyX\StudyTopic.xaml.cs">
       <DependentUpon>StudyTopic.xaml</DependentUpon>
     </Compile>
     <Compile Include="Statistics.xaml.cs">
       <DependentUpon>Statistics.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Study.xaml.cs">
+    <Compile Include="StudyX\Study.xaml.cs">
       <DependentUpon>Study.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Topics.cs" />
-    <Compile Include="Sign.xaml.cs">
+    <Compile Include="StudyX\Topics.cs" />
+    <Compile Include="SignX\Sign.xaml.cs">
       <DependentUpon>Sign.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StartLearn.xaml.cs">
+    <Compile Include="StartX\StartLearn.xaml.cs">
       <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="MainWindow.xaml">
+    <Page Include="StartX\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -118,31 +118,31 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MainWindow.xaml.cs">
+    <Compile Include="StartX\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Profile.xaml">
+    <Page Include="ProfileX\Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ProfileRedact.xaml">
+    <Page Include="ProfileX\ProfileRedact.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="RememberPass.xaml">
+    <Page Include="SignX\RememberPass.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SignIn.xaml">
+    <Page Include="SignX\SignIn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="SignUp.xaml">
+    <Page Include="SignX\SignUp.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudyTopic.xaml">
+    <Page Include="StudyX\StudyTopic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,15 +150,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Study.xaml">
+    <Page Include="StudyX\Study.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Sign.xaml">
+    <Page Include="SignX\Sign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StartLearn.xaml">
+    <Page Include="StartX\StartLearn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -8,11 +8,11 @@
              d:DesignHeight="550" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="54"/>
             <RowDefinition Height="15"/>
             <RowDefinition/>
             <RowDefinition Height="15"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="57"/>
         </Grid.RowDefinitions>
 
         <Rectangle Grid.RowSpan="5" Fill="White" Opacity="0.7"/>

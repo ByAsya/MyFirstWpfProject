@@ -28,8 +28,8 @@ namespace MyProject
         
         private void Input_Click(object sender, RoutedEventArgs e)
         {
-            In.Foreground.Opacity = 1;
-            Up.Foreground.Opacity = 0.7;
+            In.Opacity = 1;
+            Up.Opacity = 0.7;
             InUp.Children.Clear();
 
             SignIn sign = new SignIn();
@@ -39,8 +39,8 @@ namespace MyProject
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
-            Up.Foreground.Opacity = 1;
-            In.Foreground.Opacity = 0.7;
+            Up.Opacity = 1;
+            In.Opacity = 0.7;
             InUp.Children.Clear();
 
             SignUp sign = new SignUp();
@@ -49,8 +49,8 @@ namespace MyProject
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            In.Foreground.Opacity = 1;
-            Up.Foreground.Opacity = 0.7;
+            In.Opacity = 1;
+            Up.Opacity = 0.7;
 
             SignIn sign = new SignIn();
             InUp.Children.Add(sign);
