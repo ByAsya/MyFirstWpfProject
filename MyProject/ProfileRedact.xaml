@@ -38,13 +38,13 @@
         <TextBlock Grid.ColumnSpan="5" Foreground="White" FontSize="18" TextAlignment="Center" FontFamily="Verdana" Text="Редактирование"/>
         <Rectangle Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Fill="#dcc6b3" RadiusX="5" RadiusY="5"/>
         <TextBlock Grid.Row="2" Grid.Column="1" Height="25" TextAlignment="Center" Text="Имя" FontSize="16" FontFamily="Verdana" Foreground="White"/>
-        <TextBox TextAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="Gray" Background="White" Name="Name" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Opacity="0.9"/>
+        <TextBox BorderBrush="Transparent" TextAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="Gray" Background="White" Name="Name" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Opacity="0.9"/>
         <Rectangle Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3" Fill="#dcc6b3" RadiusX="5" RadiusY="5"/>
         <TextBlock Grid.Row="4" Grid.Column="1" Height="25" TextAlignment="Center" Text="Почта" FontSize="16" FontFamily="Verdana" Foreground="White"/>
-        <TextBox TextAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="Gray" Background="White" Name="Mail" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Opacity="0.9"/>
+        <TextBox BorderBrush="Transparent" TextAlignment="Center" FontFamily="Verdana" FontSize="16" Foreground="Gray" Background="White" Name="Mail" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Opacity="0.9"/>
         <Rectangle Grid.Row="6" Grid.Column="1" Grid.ColumnSpan="3" Fill="#dcc6b3" RadiusX="5" RadiusY="5"/>
         <TextBlock Grid.Row="6" Grid.Column="1" Height="25" TextAlignment="Center" Text="Пароль" FontSize="16" FontFamily="Verdana" Foreground="White"/>
-        <PasswordBox HorizontalContentAlignment="Center" Name="Pass" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Background="White" Opacity="0.9" FontSize="16"/>
+        <PasswordBox BorderBrush="Transparent" HorizontalContentAlignment="Center" Name="Pass" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" Width="200" Height="30" Background="White" Opacity="0.9" FontSize="16"/>
         <Rectangle Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3"/>
         <TextBlock Grid.Row="8" Grid.Column="1" Height="25" TextAlignment="Center" Text="Аватар" FontFamily="Verdana" FontSize="16" Foreground="White"/>
         <Button Grid.Row="10" Grid.Column="3" Height="30" VerticalAlignment="Top" Background="#dcc6b3" Content="изменить" FontFamily="Verdana" Foreground="White" FontSize="16" Click="Redact_Click"/>

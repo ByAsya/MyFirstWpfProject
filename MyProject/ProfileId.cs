@@ -10,5 +10,7 @@ namespace MyProject
     {
         public static string mail { get; set; }
         public static string name { get; set; }
+        public static int count { get; set; }
+        public static string password { get; set; }
     }
 }

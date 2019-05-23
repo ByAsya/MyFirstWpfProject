@@ -27,7 +27,7 @@ namespace MyProject
 
         private void Start_Click(object sender, RoutedEventArgs e)
         {
-            Вход_Регистрация sign = new Вход_Регистрация();
+            Sign sign = new Sign();
             sign.Show();
         }
 

@@ -99,11 +99,11 @@
     <Compile Include="TreeGraph.xaml.cs">
       <DependentUpon>TreeGraph.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Вход_Регистрация.xaml.cs">
-      <DependentUpon>Вход_Регистрация.xaml</DependentUpon>
+    <Compile Include="Sign.xaml.cs">
+      <DependentUpon>Sign.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Начало_обучения.xaml.cs">
-      <DependentUpon>Начало_обучения.xaml</DependentUpon>
+    <Compile Include="StartLearn.xaml.cs">
+      <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
@@ -153,11 +153,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Вход_Регистрация.xaml">
+    <Page Include="Sign.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Начало_обучения.xaml">
+    <Page Include="StartLearn.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

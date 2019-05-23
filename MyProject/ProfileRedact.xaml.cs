@@ -24,8 +24,14 @@ namespace MyProject
         {
             InitializeComponent();
         }
-        
-        private void Redact_Click(object sender, RoutedEventArgs e)
+
+        private void Load_Click(object sender, RoutedEventArgs e)
+        {
+            Name.Text = ProfileId.name;
+            Mail.Text = ProfileId.mail;
+        }
+
+            private void Redact_Click(object sender, RoutedEventArgs e)
         {
             Profile profile = new Profile();
             UserRepository userR = new UserRepository();
@@ -33,14 +39,14 @@ namespace MyProject
 
             userR.Delete(user_);
 
-            User user = new User { Id = Mail.Text, name = Name.Text, password = Pass.Password };
+            User user = new User { Id = Mail.Text, name = Name.Text, password = Pass.Password.GetHashCode().ToString() };
             userR.Create(user);
 
             ProfileId.mail = Mail.Text;
             ProfileId.name = Name.Text;
 
             MainWindow w = (MainWindow)Application.Current.MainWindow;
-            Начало_обучения n = new Начало_обучения();
+            StartLearn n = new StartLearn();
             n.Block.Children.Clear();
             Profile p = new Profile();
             n.AnotherPages.Children.Add(p);

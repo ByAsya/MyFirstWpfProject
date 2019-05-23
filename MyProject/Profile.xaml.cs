@@ -1,7 +1,10 @@
-﻿using MyProject.database;
+﻿using MaterialDesignThemes.Wpf;
+using MyProject.database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -28,13 +31,12 @@ namespace MyProject
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
-            mail.Text = ProfileId.mail;
+            string Mail = ProfileId.mail;
+            string[] chekS = Mail.Split(new char[] { '@'});
 
-            UserRepository userR = new UserRepository();
-            var user=userR.Get(mail.Text);
-
-            name.Text = user.name;
-            topics.Text += user.t_count;
+            mail.Text = chekS[0];
+            name.Text = ProfileId.name;
+            topics.Text+= ProfileId.count.ToString();
         }
 
 
@@ -50,7 +52,7 @@ namespace MyProject
                 name.Text = "пусто";
                 mail.Text = "пусто";
 
-                Вход_Регистрация sign = new Вход_Регистрация();
+                Sign sign = new Sign();
                 sign.Show();
 
                 MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -60,10 +62,31 @@ namespace MyProject
 
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
-            name.Text = "пусто";
-            mail.Text = "пусто";
+            StartLearn n = new StartLearn();
 
-            Вход_Регистрация sign = new Вход_Регистрация();
+            if (n.Icon.Kind == PackIconKind.Bell)
+            {
+                try
+                {
+                    MailAddress from = new MailAddress("sakun_nastya@mail.ru", "StudProg");
+                    MailAddress to = new MailAddress(ProfileId.mail);
+                    MailMessage m = new MailMessage(from, to);
+                    m.Subject = "StudProg";
+                    m.Body = $"Ваша успеваемость: {ProfileId.count}";
+                    SmtpClient smtp = new SmtpClient("smpt.mail.ru", 587);
+                    smtp.Credentials = new NetworkCredential("sakun_nastya@mail.ru", "itizam41");
+                    smtp.EnableSsl = true;
+                    smtp.Send(m);
+                }
+
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                
+            }
+
+            Sign sign = new Sign();
             sign.Show();
 
             MainWindow window = (MainWindow)Application.Current.MainWindow;

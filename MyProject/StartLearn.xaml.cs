@@ -2,6 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -19,9 +21,9 @@ namespace MyProject
     /// <summary>
     /// Логика взаимодействия для Начало_обучения.xaml
     /// </summary>
-    public partial class Начало_обучения : UserControl
+    public partial class StartLearn : UserControl
     {
-        public Начало_обучения()
+        public StartLearn()
         {
             InitializeComponent();
         }
@@ -29,11 +31,29 @@ namespace MyProject
         
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Profile profile = new Profile();
-            profile.name.Text = "пусто";
-            profile.mail.Text = "пусто";
+            if (Icon.Kind == PackIconKind.Bell)
+            {
+                try
+                {
+                    MailAddress from = new MailAddress("sakun_nastya@mail.ru", "StudProg");
+                    MailAddress to = new MailAddress(ProfileId.mail);
+                    MailMessage m = new MailMessage(from, to);
+                    m.Subject = "StudProg";
+                    m.Body = $"Ваша успеваемость: {ProfileId.count}";
+                    SmtpClient smtp = new SmtpClient("smpt.mail.ru", 587);
+                    smtp.Credentials = new NetworkCredential("sakun_nastya@mail.ru", "itizam41");
+                    smtp.EnableSsl = true;
+                    smtp.Send(m);
+                }
 
-            Вход_Регистрация sign = new Вход_Регистрация();
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+
+            }
+
+            Sign sign = new Sign();
             sign.Show();
 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -59,7 +79,7 @@ namespace MyProject
         {
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.Start.Children.Clear();
-            Начало_обучения nach = new Начало_обучения();
+            StartLearn nach = new StartLearn();
             window.Start.Children.Add(nach);
         }
         

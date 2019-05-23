@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,14 @@ namespace MyProject
         public Statistics()
         {
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            UserRepository userR = new UserRepository();
+            var users = from u in userR.GetAll()
+                        orderby u.t_count
+                        select  u;
         }
     }
 }
