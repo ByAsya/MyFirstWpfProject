@@ -1,5 +1,4 @@
 ﻿using MaterialDesignThemes.Wpf;
-using MyProject.database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,6 +29,8 @@ namespace MyProject
         }
 
         UserRepository userR = new UserRepository();
+        TaskRepository taskR = new TaskRepository();
+        TopicRepository topicR = new TopicRepository();
 
         private void Input_Click(object sender, RoutedEventArgs e)
         {
@@ -49,11 +50,10 @@ namespace MyProject
                 try
                 {
                     string mail = mail1.Text;
-
-                    UserRepository userR = new UserRepository();
+                    
                     var user = userR.Get(mail);
 
-                    if (pass1.Password.GetHashCode().ToString() != user.password)
+                    if (pass1.Password.GetHashCode().ToString()!= user.passwordU)
                     {
                         pass1.BorderBrush = Brushes.Red;
                         MessageBox.Show("Неверный пароль!");
@@ -62,15 +62,15 @@ namespace MyProject
 
                     else
                     {
-                        ProfileId.mail = user.Id;
-                        ProfileId.name = user.name;
-                        ProfileId.count = user.t_count;
+                        ProfileId.mail = user.mail;
+                        ProfileId.name = user.nameU;
+                        ProfileId.count = (int)user.topicCount;
 
                         string mailAdmin = "sakunnastya28@gmail.com";
 
-                        if (user.Id == mailAdmin)
+                        if (user.mail == mailAdmin)
                         {
-                            Topic.adminName = user.Id;
+                            TopicObject.adminName = user.mail;
 
                             n.Icon.Kind = PackIconKind.BellOff;
 

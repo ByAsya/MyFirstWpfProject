@@ -51,6 +51,8 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,7 +75,7 @@
     <Compile Include="Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="database\Data.cs" />
+    <Compile Include="Data.cs" />
     <Compile Include="ProfileX\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -112,6 +114,9 @@
     <Compile Include="StartX\StartLearn.xaml.cs">
       <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Task.cs" />
+    <Compile Include="Topic.cs" />
+    <Compile Include="User.cs" />
     <Page Include="Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -222,6 +227,9 @@
     <Resource Include="pictures\colorful-hardback-books-on-the-shelf.jpg" />
     <Resource Include="pictures\getting-to-the-point-of-all-it.jpg" />
     <Resource Include="pictures\pounding-the-books.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pictures\default_user_icon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,4 @@
-﻿using MyProject.database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -78,17 +77,18 @@ namespace MyProject
                     {
                         if (Code.Text == code.ToString())
                         {
-                            userR.Delete(userR.Get(mail.Text));
+                            var user_ = userR.Get(mail_);
+                            userR.Delete(user_);
 
-                            User user = new User { Id = mail.Text, name = name.Text, password = pass.Password.GetHashCode().ToString() };
+                            User user = new User { mail = mail.Text, nameU = name.Text, passwordU = pass.Password.GetHashCode().ToString(), topicCount=0};
                             userR.Create(user);
 
                             MessageBox.Show("Пароль восстановлен!");
 
-                            ProfileId.mail = user.Id;
-                            ProfileId.name = user.name;
-                            ProfileId.count = user.t_count;
-                            ProfileId.password = user.password;
+                            ProfileId.mail = user.mail;
+                            ProfileId.name = user.nameU;
+                            ProfileId.count = (int)user.topicCount;
+                            ProfileId.password = user.passwordU;
 
                             MainWindow window = (MainWindow)Application.Current.MainWindow;
                             window.sign.Close();
@@ -103,9 +103,9 @@ namespace MyProject
                         MessageBox.Show("Неправильный формат почты!" + Environment.NewLine + "Пример:kkk@mail.ru, kkk@gmai.com");
                 }
 
-                catch(Exception)
+                catch(Exception ex)
                 {
-                    MessageBox.Show("Данная почта уже использована!");
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }

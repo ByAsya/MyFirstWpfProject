@@ -30,7 +30,7 @@ namespace MyProject
             example.Opacity = 0.7;
             topic.Opacity = 1;
             task.Opacity = 0.7;
-            Text.Text = Topic.text;
+            Text.Text = TopicObject.text;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -39,7 +39,7 @@ namespace MyProject
             topic.Opacity = 0.7;
             task.Opacity = 0.7;
             
-            Text.Text= Topic.example;
+            Text.Text= TopicObject.example;
         }
 
         private void Task_Click(object sender, RoutedEventArgs e)
@@ -48,7 +48,7 @@ namespace MyProject
             topic.Opacity = 0.7;
             task.Opacity = 1;
             
-            Text.Text= Topic.task;
+            Text.Text= TopicObject.task;
         }
     }
 }

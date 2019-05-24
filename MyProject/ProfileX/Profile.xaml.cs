@@ -1,5 +1,4 @@
 ﻿using MaterialDesignThemes.Wpf;
-using MyProject.database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,11 +45,10 @@ namespace MyProject
                 "Удаление",MessageBoxButton.YesNo, MessageBoxImage.None,MessageBoxResult.No);
            
             if (result==MessageBoxResult.Yes)
-            {
+            {                
                 UserRepository userR = new UserRepository();
-                userR.Delete(userR.Get(mail.Text));
-                name.Text = "пусто";
-                mail.Text = "пусто";
+                var user= userR.Get(ProfileId.mail);
+                userR.Delete(user);
 
                 Sign sign = new Sign();
                 sign.Show();

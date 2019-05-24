@@ -32,7 +32,7 @@
         <Rectangle Grid.Column="0" Grid.RowSpan="11" Fill="#dcc6b3" Opacity="0.7" Margin="0 0 0 -10"/>
         <Border Grid.RowSpan="3" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="130" Height="130">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\default_user_icon.jpg"/>
             </Border.Background>
         </Border>
         <TextBlock Grid.Row="3" Name="name" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="30" VerticalAlignment="Top"/>

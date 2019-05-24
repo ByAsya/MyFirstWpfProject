@@ -1,5 +1,4 @@
-﻿using MyProject.database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +29,7 @@ namespace MyProject
         {
             UserRepository userR = new UserRepository();
             var users = from u in userR.GetAll()
-                        orderby u.t_count
+                        orderby u.topicCount
                         select  u;
         }
     }

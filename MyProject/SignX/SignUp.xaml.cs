@@ -1,6 +1,6 @@
-﻿using MyProject.database;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -29,6 +29,9 @@ namespace MyProject
         }
 
         UserRepository userR = new UserRepository();
+        TaskRepository taskR = new TaskRepository();
+        TopicRepository topicR = new TopicRepository();
+
         private void Reg_Click(object sender, RoutedEventArgs e)
         {
 
@@ -54,13 +57,13 @@ namespace MyProject
                     {
                         if (Code.Text == code.ToString())
                         {
-                            User user = new User { Id = mail2.Text, name = name2.Text, password = pass2.Password.GetHashCode().ToString() };
+                            User user = new User { mail = mail2.Text, nameU = name2.Text, passwordU = pass2.Password.GetHashCode().ToString(), topicCount=0};
                             userR.Create(user);
 
-                            ProfileId.mail = user.Id;
-                            ProfileId.name = user.name;
-                            ProfileId.count = user.t_count;
-                            ProfileId.password = user.password;
+                            ProfileId.mail = user.mail;
+                            ProfileId.name = user.nameU;
+                            ProfileId.count = (int)user.topicCount;
+                            ProfileId.password = user.passwordU;
 
                             MessageBox.Show("Регистрация выполнена успешно!");
                             MainWindow window = (MainWindow)Application.Current.MainWindow;
@@ -81,7 +84,7 @@ namespace MyProject
 
                 catch (Exception)
                 {
-                    MessageBox.Show("Данная почта уже использована!");
+                    MessageBox.Show("Данная почта уже занята!");
                 }
             }
         }

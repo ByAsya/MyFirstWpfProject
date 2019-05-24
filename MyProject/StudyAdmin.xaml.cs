@@ -31,7 +31,7 @@ namespace MyProject
             example.Opacity = 0.7;
             topic.Opacity = 1;
             task.Opacity = 0.7;
-            TextR.AppendText( Topic.text);
+            TextR.AppendText( TopicObject.text);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -40,7 +40,7 @@ namespace MyProject
             example.Opacity = 1;
             topic.Opacity = 0.7;
             task.Opacity = 0.7;
-            TextR.AppendText(Topic.example);
+            TextR.AppendText(TopicObject.example);
         }
 
         private void Task_Click(object sender, RoutedEventArgs e)
@@ -49,30 +49,30 @@ namespace MyProject
             example.Opacity = 0.7;
             topic.Opacity = 0.7;
             task.Opacity = 1;
-            TextR.AppendText(Topic.text);
+            TextR.AppendText(TopicObject.text);
         }
 
         private void Redact_Click(object sender, RoutedEventArgs e)
         {
             string text = new TextRange(TextNameR.Document.ContentStart, TextNameR.Document.ContentEnd).Text;
-            Topic.name = text;
+            TopicObject.name = text;
 
             if (topic.Opacity == 1)
             {
                 text = new TextRange(TextR.Document.ContentStart, TextR.Document.ContentEnd).Text;
-                Topic.text = text;
+                TopicObject.text = text;
             }
 
             else if (example.Opacity == 1)
             {
                 text = new TextRange(TextR.Document.ContentStart, TextR.Document.ContentEnd).Text;
-                Topic.example = text;
+                TopicObject.example = text;
             }
 
             else if(task.Opacity==1)
             {
                 text = new TextRange(TextR.Document.ContentStart, TextR.Document.ContentEnd).Text;
-                Topic.task = text;
+                TopicObject.task = text;
             }               
 
             MessageBox.Show("Изменения сохранены!");

@@ -1,5 +1,4 @@
-﻿using MyProject.database;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,7 +38,7 @@ namespace MyProject
 
             userR.Delete(user_);
 
-            User user = new User { Id = Mail.Text, name = Name.Text, password = Pass.Password.GetHashCode().ToString() };
+            User user = new User { mail = Mail.Text, nameU = Name.Text, passwordU = Pass.Password.GetHashCode().ToString()};
             userR.Create(user);
 
             ProfileId.mail = Mail.Text;

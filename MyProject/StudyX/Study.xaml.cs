@@ -32,15 +32,15 @@ namespace MyProject
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;            
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;            
 
-            if(Topic.adminName=="sakunnastya28@gmail.com")
+            if(TopicObject.adminName=="sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
                 adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(Topic.text);
-                adminS.TextNameR.AppendText(Topic.name);
+                adminS.TextR.AppendText(TopicObject.text);
+                adminS.TextNameR.AppendText(TopicObject.name);
                 topics.Children.Add(adminS);
             }
             else
@@ -51,15 +51,15 @@ namespace MyProject
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;
 
-            if (Topic.adminName == "sakunnastya28@gmail.com")
+            if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
                 adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(Topic.text);
-                adminS.TextNameR.AppendText(Topic.name);
+                adminS.TextR.AppendText(TopicObject.text);
+                adminS.TextNameR.AppendText(TopicObject.name);
                 topics.Children.Add(adminS);
             }
             else
@@ -70,15 +70,15 @@ namespace MyProject
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;
 
-            if (Topic.adminName == "sakunnastya28@gmail.com")
+            if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
                 adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(Topic.text);
-                adminS.TextNameR.AppendText(Topic.name);
+                adminS.TextR.AppendText(TopicObject.text);
+                adminS.TextNameR.AppendText(TopicObject.name);
                 topics.Children.Add(adminS);
             }
             else
@@ -89,15 +89,15 @@ namespace MyProject
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;
 
-            if (Topic.adminName == "sakunnastya28@gmail.com")
+            if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
                 adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(Topic.text);
-                adminS.TextNameR.AppendText(Topic.name);
+                adminS.TextR.AppendText(TopicObject.text);
+                adminS.TextNameR.AppendText(TopicObject.name);
                 topics.Children.Add(adminS);
             }
             else

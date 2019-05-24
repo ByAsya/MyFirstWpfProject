@@ -118,13 +118,13 @@ namespace MyProject
             StudyTopic ql = new StudyTopic();
             st.topics.Children.Clear();
 
-            Topic.name = "Один";
-            Topic.text = "ТекстОдин";
-            Topic.example = "Пример1";
-            Topic.task = "Задание1";
+            TopicObject.name = "Один";
+            TopicObject.text = "ТекстОдин";
+            TopicObject.example = "Пример1";
+            TopicObject.task = "Задание1";
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;
 
             st.topics.Children.Add(ql);
         }
@@ -140,13 +140,13 @@ namespace MyProject
             StudyTopic ql = new StudyTopic();
             st.topics.Children.Clear();
 
-            Topic.name = "Два";
-            Topic.text = "ТекстДва";
-            Topic.example = "Пример2";
-            Topic.task = "Задание2";
+            TopicObject.name = "Два";
+            TopicObject.text = "ТекстДва";
+            TopicObject.example = "Пример2";
+            TopicObject.task = "Задание2";
 
-            ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
+            ql.TextName.Text = TopicObject.name;
+            ql.Text.Text = TopicObject.text;
 
             st.topics.Children.Add(ql);
         }
