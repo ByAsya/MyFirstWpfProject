@@ -26,61 +26,82 @@ namespace MyProject
         }
 
         StudyTopic ql = new StudyTopic();
+        StudyAdmin adminS = new StudyAdmin();
 
         private void QL_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
-            Topic.name = "Один";
-            Topic.text = "ТекстОдин";
-            Topic.example = "Пример1";
-            Topic.task = "Задание1";
 
             ql.TextName.Text = Topic.name;
-            ql.Text.Text = Topic.text;
-            
-            topics.Children.Add(ql);
+            ql.Text.Text = Topic.text;            
+
+            if(Topic.adminName=="sakunnastya28@gmail.com")
+            {
+                adminS.TextR.Document.Blocks.Clear();
+                adminS.TextNameR.Document.Blocks.Clear();
+                adminS.TextR.AppendText(Topic.text);
+                adminS.TextNameR.AppendText(Topic.name);
+                topics.Children.Add(adminS);
+            }
+            else
+                topics.Children.Add(ql);
         }
         
         private void TG_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
-            Topic.name = "Два";
-            Topic.text = "ТекстДва";
-            Topic.example = "Пример2";
-            Topic.task = "Задание2";
 
             ql.TextName.Text = Topic.name;
             ql.Text.Text = Topic.text;
 
-            topics.Children.Add(ql);
+            if (Topic.adminName == "sakunnastya28@gmail.com")
+            {
+                adminS.TextR.Document.Blocks.Clear();
+                adminS.TextNameR.Document.Blocks.Clear();
+                adminS.TextR.AppendText(Topic.text);
+                adminS.TextNameR.AppendText(Topic.name);
+                topics.Children.Add(adminS);
+            }
+            else
+                topics.Children.Add(ql);
         }
 
         private void DS_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
-            Topic.name = "Три";
-            Topic.text = "ТекстТри";
-            Topic.example = "Пример3";
-            Topic.task = "Задание3";
 
             ql.TextName.Text = Topic.name;
             ql.Text.Text = Topic.text;
 
-            topics.Children.Add(ql);
+            if (Topic.adminName == "sakunnastya28@gmail.com")
+            {
+                adminS.TextR.Document.Blocks.Clear();
+                adminS.TextNameR.Document.Blocks.Clear();
+                adminS.TextR.AppendText(Topic.text);
+                adminS.TextNameR.AppendText(Topic.name);
+                topics.Children.Add(adminS);
+            }
+            else
+                topics.Children.Add(ql);
         }
 
         private void Sort_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
-            Topic.name = "Четыре";
-            Topic.text = "Текст4";
-            Topic.example = "Пример4";
-            Topic.task = "Задание4";
 
             ql.TextName.Text = Topic.name;
             ql.Text.Text = Topic.text;
 
-            topics.Children.Add(ql);
+            if (Topic.adminName == "sakunnastya28@gmail.com")
+            {
+                adminS.TextR.Document.Blocks.Clear();
+                adminS.TextNameR.Document.Blocks.Clear();
+                adminS.TextR.AppendText(Topic.text);
+                adminS.TextNameR.AppendText(Topic.name);
+                topics.Children.Add(adminS);
+            }
+            else
+                topics.Children.Add(ql);
         }
     }
 }

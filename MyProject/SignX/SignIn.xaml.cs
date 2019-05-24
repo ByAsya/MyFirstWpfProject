@@ -70,9 +70,18 @@ namespace MyProject
 
                         if (user.Id == mailAdmin)
                         {
+                            Topic.adminName = user.Id;
+
+                            n.Icon.Kind = PackIconKind.BellOff;
+
                             Admin admin = new Admin();
                             Study study = new Study();
+                            StudyAdminStart studyA = new StudyAdminStart();
+
+
                             n.AdminPage.Children.Clear();
+                            study.topics.Children.Clear();
+                            study.topics.Children.Add(studyA);
                             n.AnotherPages.Children.Add(study);
                             n.Admin.Children.Add(admin);
                             w.Start.Children.Add(n);

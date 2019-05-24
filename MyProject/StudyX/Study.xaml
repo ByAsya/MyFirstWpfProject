@@ -33,7 +33,7 @@
 
         <Rectangle Grid.Column="0" Grid.RowSpan="12" Fill="#dcc6b3" Opacity="0.7" Margin="0 0 0 -8"/>
         <TextBlock Grid.Row="1" Text="Все курсы:" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
-        <Button Grid.Row="3" Height="50" Background="Transparent" BorderBrush="Transparent" Click="QL_Click" Margin="0,0.2">
+        <Button Grid.Row="3" Height="Auto" Background="Transparent" BorderBrush="Transparent" Click="QL_Click" Margin="0,0.6,0,29.4" Grid.RowSpan="2">
             <Grid>
                 <materialDesign:PackIcon Kind="Done" Height="30" Width="30" Foreground="White" Margin="0,0,130,0"/>
                 <TextBlock Text="Стек и очередь" Height="23" TextAlignment="Center" FontSize="18" Foreground="White" FontFamily="Verdana" Width="144" Margin="40,0,0,0"/>

@@ -22,8 +22,9 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
 
-        <Button HorizontalAlignment="Center" Grid.Row="1" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
-        <Button HorizontalAlignment="Center" Grid.Row="3" Height="50" Background="#dcc6b3" Content="Изменить" Foreground="White" FontFamily="Verdana" FontSize="20"/>
-        <Button HorizontalAlignment="Center" Grid.Row="5" Height="50" Background="#dcc6b3" Content="Выход" Foreground="White" FontFamily="Verdana" FontSize="20"/>
+        <Button HorizontalAlignment="Center" Grid.Row="1" Height="50" Background="#dcc6b3" Width="110" Foreground="White" FontFamily="Verdana" Click="Button_Click">
+            <TextBlock FontSize="16">Начальная <LineBreak/> страница</TextBlock>
+        </Button>
+        <Button HorizontalAlignment="Center" Grid.Row="3" Height="50" Background="#dcc6b3" Content="Выход" Foreground="White" FontFamily="Verdana" FontSize="16" Click="Exit_Click"/>
     </Grid>
 </UserControl>

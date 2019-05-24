@@ -12,6 +12,7 @@ namespace MyProject
         public static string text { get; set; }
         public static string example { get; set; }
         public static string task { get; set; }
+        public static string adminName { get; set; }
     }
 }
 
