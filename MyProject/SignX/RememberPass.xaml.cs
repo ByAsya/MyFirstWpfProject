@@ -80,14 +80,14 @@ namespace MyProject
                             var user_ = userR.Get(mail_);
                             userR.Delete(user_);
 
-                            User user = new User { mail = mail.Text, nameU = name.Text, passwordU = pass.Password.GetHashCode().ToString(), topicCount=0};
+                            User user = new User { mail = mail.Text, nameU = name.Text, passwordU = pass.Password.GetHashCode().ToString()};
                             userR.Create(user);
 
                             MessageBox.Show("Пароль восстановлен!");
 
                             ProfileId.mail = user.mail;
                             ProfileId.name = user.nameU;
-                            ProfileId.count = (int)user.topicCount;
+                            ProfileId.count = (int)user.points;
                             ProfileId.password = user.passwordU;
 
                             MainWindow window = (MainWindow)Application.Current.MainWindow;

@@ -26,7 +26,7 @@ namespace MyProject
         [StringLength(20)]
         public string topic { get; set; }
 
-        public int? topicCount { get; set; }
+        public int? points { get; set; }
 
         public virtual Topic Topic1 { get; set; }
     }

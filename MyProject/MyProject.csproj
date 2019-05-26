@@ -72,10 +72,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Admin.xaml.cs">
+    <Compile Include="Admin\Admin.xaml.cs">
       <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Data.cs" />
+    <Compile Include="Database\Data.cs" />
+    <Compile Include="Database\DataObjects.cs" />
     <Compile Include="ProfileX\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -92,10 +93,10 @@
     <Compile Include="SignX\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudyAdmin.xaml.cs">
+    <Compile Include="Admin\StudyAdmin.xaml.cs">
       <DependentUpon>StudyAdmin.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudyAdminStart.xaml.cs">
+    <Compile Include="Admin\StudyAdminStart.xaml.cs">
       <DependentUpon>StudyAdminStart.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudyX\StudyTopic.xaml.cs">
@@ -107,17 +108,17 @@
     <Compile Include="StudyX\Study.xaml.cs">
       <DependentUpon>Study.xaml</DependentUpon>
     </Compile>
-    <Compile Include="StudyX\Topics.cs" />
+    <Compile Include="StudyX\TopicObject.cs" />
     <Compile Include="SignX\Sign.xaml.cs">
       <DependentUpon>Sign.xaml</DependentUpon>
     </Compile>
     <Compile Include="StartX\StartLearn.xaml.cs">
       <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Task.cs" />
-    <Compile Include="Topic.cs" />
-    <Compile Include="User.cs" />
-    <Page Include="Admin.xaml">
+    <Compile Include="Database\Task.cs" />
+    <Compile Include="Database\Topic.cs" />
+    <Compile Include="Database\User.cs" />
+    <Page Include="Admin\Admin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,11 +154,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudyAdmin.xaml">
+    <Page Include="Admin\StudyAdmin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="StudyAdminStart.xaml">
+    <Page Include="Admin\StudyAdminStart.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

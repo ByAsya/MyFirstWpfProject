@@ -4,9 +4,12 @@ drop table Users
 create table Tasks
 (
 	nameTask int identity(1,1) constraint nameTask_PK primary key(nameTask),
-	textTask nvarchar(max)
+	textTask nvarchar(max),
+	answers nvarchar(100),
+	topic≈ nvarchar(20) constraint topic≈_FK foreign key(topic≈) references Topics(nameTopic)
 )
 
+drop table Users
 create table Topics
 (
 	nameTopic nvarchar(20) constraint nameT_PK primary key(nameTopic),
@@ -17,11 +20,15 @@ create table Topics
 
 create table Users
 (
-	mail nvarchar(20) constraint mail_PK primary key(mail),
+	mail nvarchar(100) constraint mail_PK primary key(mail),
 	pictureProfile nvarchar(100) default 'D:\ŒŒœ\MyProject\MyProject\pictures\default_user_icon.jpg',
 	nameU nvarchar(20) not null,
-	passwordU int not null,
+	passwordU nvarchar(10) not null,
 	topic nvarchar(20) constraint topic_FK foreign key(topic) references Topics(nameTopic),
-	topicCount int default 0
+	points int default 0
 )
 
+select * from Users
+
+drop table Tasks
+delete Users where mail='sakunnastya28@gmail.com'

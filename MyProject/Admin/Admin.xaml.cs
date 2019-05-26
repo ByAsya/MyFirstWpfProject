@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -49,6 +50,44 @@ namespace MyProject
             n.AnotherPages.Children.Add(study);
             n.Admin.Children.Add(admin);
             w.Start.Children.Add(n);
+        }
+
+        private void SaveChanges_Click(object sender, RoutedEventArgs e)
+        {
+            TaskRepository taskR = new TaskRepository();
+            TopicRepository topicR = new TopicRepository();
+
+            //Task task = new Task { textTask=DataObjects.textTask, answer="пусто", nameTask=1};
+            //taskR.Create(task);
+
+            Topic topic = new Topic { topicText = DataObjects.textTopic, exampleText = DataObjects.textExample, nameTopic = DataObjects.nameTopic, taskCount = 0 };
+
+            try
+            {
+                topicR.Create(topic);
+                MessageBox.Show("Изменения сохранены!");
+            }
+
+            catch(Exception)
+            {
+                var t = topicR.Get(DataObjects.nameTopic);
+                topicR.Delete(t);
+
+                try
+                {
+                    topicR.Create(topic);
+                    MessageBox.Show("Изменения сохранены!");
+                }
+
+                catch
+                {
+                    MessageBox.Show("Изменения сохранены!");
+                }
+            }
+
+            
+
+            
         }
     }
 }

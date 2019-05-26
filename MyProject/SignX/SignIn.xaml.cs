@@ -64,7 +64,7 @@ namespace MyProject
                     {
                         ProfileId.mail = user.mail;
                         ProfileId.name = user.nameU;
-                        ProfileId.count = (int)user.topicCount;
+                        ProfileId.count = (int)user.points;
 
                         string mailAdmin = "sakunnastya28@gmail.com";
 
@@ -85,16 +85,21 @@ namespace MyProject
                             n.AnotherPages.Children.Add(study);
                             n.Admin.Children.Add(admin);
                             w.Start.Children.Add(n);
+
+                            MainWindow window = (MainWindow)Application.Current.MainWindow;
+                            window.sign.Close();
                         }
 
                         else
                         {
                             n.AnotherPages.Children.Add(p);
                             w.Start.Children.Add(n);
+
+                            MainWindow window = (MainWindow)Application.Current.MainWindow;
+                            window.sign.Close();
                         }
 
-                        MainWindow window = (MainWindow)Application.Current.MainWindow;
-                        window.sign.Close();
+                        
                     }
                 }
 

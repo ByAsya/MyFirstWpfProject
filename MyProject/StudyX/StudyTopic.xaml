@@ -17,9 +17,11 @@
 
         <Rectangle Grid.RowSpan="5" Fill="White" Opacity="0.7"/>
         <Rectangle Grid.Row="0" Height="30" Width="440" RadiusX="5" RadiusY="5" Fill="#dcc6b3" VerticalAlignment="Bottom" Opacity="0.8"/>
-        <TextBlock Name="TextName" Grid.Row="0" Height="30" Width="420" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Verdana" Margin="0,20,0,0"/>
+        <TextBlock Name="TextName" Grid.Row="0" Height="25" Width="420" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Verdana" Margin="0,25,0,0"/>
         <Rectangle Grid.Row="2" Height="410" Width="440" RadiusX="5" RadiusY="5" Fill="#dcc6b3" VerticalAlignment="Top" Opacity="0.8"/>
-        <TextBlock TextWrapping="Wrap" Name="Text" Grid.Row="2" Height="390" Width="420" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="Verdana" Foreground="White" FontSize="18"/>
+        <ScrollViewer Grid.Row="2" Width="440">
+            <TextBlock TextWrapping="Wrap" Name="Text" Grid.Row="2" Height="390" Width="420" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="Verdana" Foreground="White" FontSize="18"/>
+        </ScrollViewer>
         <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Top">
             <Button Name="topic" Width="120" Background="#dcc6b3" Content="Теория" FontSize="18" FontFamily="Verdana" Foreground="White" Click="Button_Click"/>
             <Button Name="example" Width="120" Background="#dcc6b3"  Opacity="0.7" Content="Примеры" FontSize="18" FontFamily="Verdana" Foreground="White" Click="Button_Click_1"/>

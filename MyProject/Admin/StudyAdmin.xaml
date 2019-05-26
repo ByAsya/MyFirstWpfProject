@@ -16,7 +16,7 @@
 
         <Rectangle Grid.RowSpan="5" Fill="White" Opacity="0.7"/>
         <Rectangle Grid.Row="0" Height="30" Width="440" RadiusX="5" RadiusY="5" Fill="#dcc6b3" VerticalAlignment="Bottom" Opacity="0.8"/>
-        <RichTextBox BorderThickness="0"  Name="TextNameR" Background="Transparent" Grid.Row="0" Height="25" Width="420"  Foreground="White" FontSize="20" FontFamily="Verdana" Margin="0,25,0,0"/>
+        <TextBlock Name="TextName" Grid.Row="0" Height="25" Width="420" TextAlignment="Center" Foreground="White" FontSize="20" FontFamily="Verdana" Margin="0,25,0,0"/>
         <Rectangle Grid.Row="2" Height="410" Width="440" RadiusX="5" RadiusY="5" Fill="#dcc6b3" VerticalAlignment="Top" Opacity="0.8"/>
         <RichTextBox BorderThickness="0" Name="TextR" Background="Transparent" Grid.Row="2" Height="390" Width="420" VerticalAlignment="Top" Margin="0,10,0,0" FontFamily="Verdana" Foreground="White" FontSize="18"/>
         <StackPanel Orientation="Horizontal" Grid.Row="5" HorizontalAlignment="Center" Margin="0 0 0 0" VerticalAlignment="Top">

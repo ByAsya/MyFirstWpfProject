@@ -29,7 +29,7 @@ namespace MyProject
         {
             UserRepository userR = new UserRepository();
             var users = from u in userR.GetAll()
-                        orderby u.topicCount
+                        orderby u.points
                         select  u;
         }
     }

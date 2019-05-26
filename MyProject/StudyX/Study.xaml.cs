@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -25,83 +26,91 @@ namespace MyProject
             InitializeComponent();
         }
 
-        StudyTopic ql = new StudyTopic();
+        StudyTopic st = new StudyTopic();
         StudyAdmin adminS = new StudyAdmin();
 
         private void QL_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;            
+            DataObjects.nameTopic = "Стеки и очереди";
+            st.TextName.Text = DataObjects.nameTopic;
+            adminS.TextName.Text = DataObjects.nameTopic;
+            st.Text.Text = DataObjects.textTopic;            
 
             if(TopicObject.adminName=="sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
-                adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(TopicObject.text);
-                adminS.TextNameR.AppendText(TopicObject.name);
+                adminS.TextR.AppendText(DataObjects.textTopic);
                 topics.Children.Add(adminS);
             }
             else
-                topics.Children.Add(ql);
+            {
+                topics.Children.Add(st);
+            }
         }
         
         private void TG_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;
+            DataObjects.nameTopic = "Деревья и графы";
+            st.TextName.Text = DataObjects.nameTopic;
+            adminS.TextName.Text = DataObjects.nameTopic;
+            st.Text.Text = DataObjects.textTopic;
 
             if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
-                adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(TopicObject.text);
-                adminS.TextNameR.AppendText(TopicObject.name);
+                adminS.TextR.AppendText(DataObjects.textTopic);
                 topics.Children.Add(adminS);
             }
             else
-                topics.Children.Add(ql);
+            {
+                topics.Children.Add(st);
+            }
         }
 
         private void DS_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;
+            DataObjects.nameTopic = "Деки и списки";
+            st.TextName.Text = DataObjects.nameTopic;
+            adminS.TextName.Text = DataObjects.nameTopic;
+            st.Text.Text = DataObjects.textTopic;
 
             if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
-                adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(TopicObject.text);
-                adminS.TextNameR.AppendText(TopicObject.name);
+                adminS.TextR.AppendText(DataObjects.textTopic);
                 topics.Children.Add(adminS);
             }
             else
-                topics.Children.Add(ql);
+            {
+                topics.Children.Add(st);
+            }
         }
 
         private void Sort_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;
+            DataObjects.nameTopic = "Сортировки";
+            st.TextName.Text = DataObjects.nameTopic;
+            adminS.TextName.Text = DataObjects.nameTopic;
+            st.Text.Text = DataObjects.textTopic;
 
             if (TopicObject.adminName == "sakunnastya28@gmail.com")
             {
                 adminS.TextR.Document.Blocks.Clear();
-                adminS.TextNameR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(TopicObject.text);
-                adminS.TextNameR.AppendText(TopicObject.name);
+                adminS.TextR.AppendText(DataObjects.textTopic);
                 topics.Children.Add(adminS);
             }
             else
-                topics.Children.Add(ql);
+            {
+                topics.Children.Add(st);
+            }
         }
     }
 }

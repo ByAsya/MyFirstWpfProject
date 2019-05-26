@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace MyProject
             example.Opacity = 0.7;
             topic.Opacity = 1;
             task.Opacity = 0.7;
-            Text.Text = TopicObject.text;
+            Text.Text = DataObjects.textTask;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -39,7 +40,7 @@ namespace MyProject
             topic.Opacity = 0.7;
             task.Opacity = 0.7;
             
-            Text.Text= TopicObject.example;
+            Text.Text= DataObjects.textExample;
         }
 
         private void Task_Click(object sender, RoutedEventArgs e)
@@ -48,7 +49,7 @@ namespace MyProject
             topic.Opacity = 0.7;
             task.Opacity = 1;
             
-            Text.Text= TopicObject.task;
+            Text.Text= DataObjects.textTopic;
         }
     }
 }

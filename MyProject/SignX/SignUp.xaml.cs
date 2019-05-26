@@ -1,20 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MyProject
 {
@@ -57,12 +46,12 @@ namespace MyProject
                     {
                         if (Code.Text == code.ToString())
                         {
-                            User user = new User { mail = mail2.Text, nameU = name2.Text, passwordU = pass2.Password.GetHashCode().ToString(), topicCount=0};
+                            User user = new User { mail = mail2.Text, nameU = name2.Text, passwordU = pass2.Password.GetHashCode().ToString(), pictureProfile="d", points=0, topic="пусто"};
                             userR.Create(user);
 
                             ProfileId.mail = user.mail;
                             ProfileId.name = user.nameU;
-                            ProfileId.count = (int)user.topicCount;
+                            ProfileId.count = (int)user.points;
                             ProfileId.password = user.passwordU;
 
                             MessageBox.Show("Регистрация выполнена успешно!");
@@ -82,9 +71,9 @@ namespace MyProject
 
                 }
 
-                catch (Exception)
+                catch (Exception ex)
                 {
-                    MessageBox.Show("Данная почта уже занята!");
+                    MessageBox.Show(ex.ToString());
                 }
             }
         }

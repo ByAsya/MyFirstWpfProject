@@ -12,5 +12,12 @@ namespace MyProject
         public int nameTask { get; set; }
 
         public string textTask { get; set; }
+
+        public string answer { get; set; }
+
+        [StringLength(20)]
+        public string topicT { get; set; }
+
+        public virtual Topic Topic1 { get; set; }
     }
 }
