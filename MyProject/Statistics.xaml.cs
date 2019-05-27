@@ -30,7 +30,7 @@ namespace MyProject
         {
             UserRepository userR = new UserRepository();
             var users = from u in userR.GetAll()
-                        orderby (u.pointsFour+u.pointsOne+u.pointsTwo+u.pointsThree)
+                        orderby (u.pointsFour+u.pointsOne+u.pointsTwo+u.pointsThree) descending
                         select  u;
 
             

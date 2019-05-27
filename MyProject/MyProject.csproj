@@ -79,7 +79,7 @@
     <Compile Include="Admin\TopicU.xaml.cs">
       <DependentUpon>TopicU.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Answer.xaml.cs">
+    <Compile Include="StudyX\Answer.xaml.cs">
       <DependentUpon>Answer.xaml</DependentUpon>
     </Compile>
     <Compile Include="Database\Database.cs" />
@@ -119,9 +119,6 @@
     <Compile Include="StartX\StartLearn.xaml.cs">
       <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TaskQ.xaml.cs">
-      <DependentUpon>TaskQ.xaml</DependentUpon>
-    </Compile>
     <Page Include="Admin\TaskU.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -130,7 +127,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Answer.xaml">
+    <Page Include="StudyX\Answer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -183,10 +180,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StartX\StartLearn.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="TaskQ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

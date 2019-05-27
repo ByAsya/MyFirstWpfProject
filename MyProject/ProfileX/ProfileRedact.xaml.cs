@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -32,29 +33,61 @@ namespace MyProject
             Mail.Text = ProfileId.mail;
         }
 
-            private void Redact_Click(object sender, RoutedEventArgs e)
+        private void Redact_Click(object sender, RoutedEventArgs e)
         {
             Profile profile = new Profile();
             UserRepository userR = new UserRepository();
             var user_ = userR.Get(ProfileId.mail);
+            user_.nameU = Name.Text;
+            user_.passwordU = Pass.Password.GetHashCode().ToString();
+            user_.mail = Mail.Text;
 
-            userR.Delete(user_);
-
-            User user = new User { mail = Mail.Text, nameU = Name.Text, passwordU = Pass.Password.GetHashCode().ToString()};
-            userR.Create(user);
+            userR.Save();
 
             ProfileId.mail = Mail.Text;
             ProfileId.name = Name.Text;
 
-            MainWindow w = (MainWindow)Application.Current.MainWindow;
+            MainWindow w = (MainWindow)System.Windows.Application.Current.MainWindow;
             StartLearn n = new StartLearn();
             n.Block.Children.Clear();
             Profile p = new Profile();
             n.AnotherPages.Children.Add(p);
             w.Start.Children.Add(n);
 
-            MessageBox.Show("Данные изменены!");
+            System.Windows.MessageBox.Show("Данные изменены!");
             this.Close();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+                DragMove();
+        }
+
+        private void Picture_Click(object sender, RoutedEventArgs e)
+        {
+            string image = "";
+            try
+            {
+                OpenFileDialog dialog = new OpenFileDialog();
+                dialog.Filter = "jpg files(*.jpg)|*.jpg| PNG files(*.png)|*.png| All files(*.*)|*.*";
+
+                if(dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    image = dialog.FileName;
+                    ProfileId.picture = image;
+
+                    UserRepository userR = new UserRepository();
+                    var user = userR.Get(ProfileId.mail);
+                    user.pictureProfile = ProfileId.picture;
+                    userR.Save();
+                    
+                }
+            }
+
+            catch(Exception ex)
+            {
+                System.Windows.MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

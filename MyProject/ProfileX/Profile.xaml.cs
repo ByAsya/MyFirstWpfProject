@@ -40,9 +40,12 @@ namespace MyProject
             UserRepository userR = new UserRepository();
             var user=userR.Get(Mail);
             name.Text = user.nameU;
-            DataObjects.taskCount = (int)(user.pointsOne + user.pointsThree + user.pointsTwo + user.pointsFour);
+            int point = (int)(user.pointsOne + user.pointsThree + user.pointsTwo + user.pointsFour);
+            DataObjects.taskCount = point;
             topics.Text+=DataObjects.taskCount.ToString();
             picture.ImageSource = new BitmapImage(new Uri(ProfileId.picture,UriKind.Relative));
+            user.pictureProfile = picture.ImageSource.ToString();
+            userR.Save();
 
             one.Text = "Ваши баллы: " + user.pointsOne;
             two.Text = "Ваши баллы: " + user.pointsTwo;

@@ -36,5 +36,10 @@ namespace MyProject
         {
             Application.Current.Shutdown();
         }
+
+        private void Start_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
     }
 }

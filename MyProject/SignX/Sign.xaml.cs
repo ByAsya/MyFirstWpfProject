@@ -34,7 +34,12 @@ namespace MyProject
             SignIn sign = new SignIn();
             InUp.Children.Add(sign);
             
-        } 
+        }
+
+        private void Start_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
 
         private void Reg_Click(object sender, RoutedEventArgs e)
         {

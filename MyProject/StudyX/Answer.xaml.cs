@@ -153,5 +153,10 @@ namespace MyProject
             }
             this.Close();
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+                DragMove();
+        }
     }
 }
