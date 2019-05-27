@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -27,27 +28,20 @@ namespace MyProject
         }
 
         StudyTopic st = new StudyTopic();
-        StudyAdmin adminS = new StudyAdmin();
 
         private void QL_Click(object sender, RoutedEventArgs e)
         {
             topics.Children.Clear();
 
             DataObjects.nameTopic = "Стеки и очереди";
-            st.TextName.Text = DataObjects.nameTopic;
-            adminS.TextName.Text = DataObjects.nameTopic;
-            st.Text.Text = DataObjects.textTopic;            
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            if(TopicObject.adminName=="sakunnastya28@gmail.com")
-            {
-                adminS.TextR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(DataObjects.textTopic);
-                topics.Children.Add(adminS);
-            }
-            else
-            {
-                topics.Children.Add(st);
-            }
+            topics.Children.Clear();
+            st.TextName.Text = topic.nameTopic;
+            st.Text.Text = topic.topicText;            
+
+            topics.Children.Add(st);
         }
         
         private void TG_Click(object sender, RoutedEventArgs e)
@@ -55,20 +49,14 @@ namespace MyProject
             topics.Children.Clear();
 
             DataObjects.nameTopic = "Деревья и графы";
-            st.TextName.Text = DataObjects.nameTopic;
-            adminS.TextName.Text = DataObjects.nameTopic;
-            st.Text.Text = DataObjects.textTopic;
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            if (TopicObject.adminName == "sakunnastya28@gmail.com")
-            {
-                adminS.TextR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(DataObjects.textTopic);
-                topics.Children.Add(adminS);
-            }
-            else
-            {
-                topics.Children.Add(st);
-            }
+            topics.Children.Clear();
+            st.TextName.Text = topic.nameTopic;
+            st.Text.Text = topic.topicText;
+
+            topics.Children.Add(st);
         }
 
         private void DS_Click(object sender, RoutedEventArgs e)
@@ -76,20 +64,14 @@ namespace MyProject
             topics.Children.Clear();
 
             DataObjects.nameTopic = "Деки и списки";
-            st.TextName.Text = DataObjects.nameTopic;
-            adminS.TextName.Text = DataObjects.nameTopic;
-            st.Text.Text = DataObjects.textTopic;
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            if (TopicObject.adminName == "sakunnastya28@gmail.com")
-            {
-                adminS.TextR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(DataObjects.textTopic);
-                topics.Children.Add(adminS);
-            }
-            else
-            {
-                topics.Children.Add(st);
-            }
+            topics.Children.Clear();
+            st.TextName.Text = topic.nameTopic;
+            st.Text.Text = topic.topicText;
+
+            topics.Children.Add(st);
         }
 
         private void Sort_Click(object sender, RoutedEventArgs e)
@@ -97,20 +79,22 @@ namespace MyProject
             topics.Children.Clear();
 
             DataObjects.nameTopic = "Сортировки";
-            st.TextName.Text = DataObjects.nameTopic;
-            adminS.TextName.Text = DataObjects.nameTopic;
-            st.Text.Text = DataObjects.textTopic;
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            if (TopicObject.adminName == "sakunnastya28@gmail.com")
-            {
-                adminS.TextR.Document.Blocks.Clear();
-                adminS.TextR.AppendText(DataObjects.textTopic);
-                topics.Children.Add(adminS);
-            }
-            else
-            {
-                topics.Children.Add(st);
-            }
+            topics.Children.Clear();
+            st.TextName.Text = topic.nameTopic;
+            st.Text.Text = topic.topicText;
+
+            topics.Children.Add(st);
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            TopicRepository topicR = new TopicRepository();
+            var topic=topicR.Get("Введение");
+
+            startTopic.Text = topic.topicText;
         }
     }
 }

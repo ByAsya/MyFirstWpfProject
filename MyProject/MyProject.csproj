@@ -72,11 +72,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Admin\Admin.xaml.cs">
-      <DependentUpon>Admin.xaml</DependentUpon>
+    <Compile Include="Admin\AdminData.cs" />
+    <Compile Include="Admin\TaskU.xaml.cs">
+      <DependentUpon>TaskU.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Database\Data.cs" />
+    <Compile Include="Admin\TopicU.xaml.cs">
+      <DependentUpon>TopicU.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Answer.xaml.cs">
+      <DependentUpon>Answer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Database\Database.cs" />
     <Compile Include="Database\DataObjects.cs" />
+    <Compile Include="Database\Task.cs" />
+    <Compile Include="Database\Topic.cs" />
+    <Compile Include="Database\User.cs" />
     <Compile Include="ProfileX\Profile.xaml.cs">
       <DependentUpon>Profile.xaml</DependentUpon>
     </Compile>
@@ -92,12 +102,6 @@
     </Compile>
     <Compile Include="SignX\SignUp.xaml.cs">
       <DependentUpon>SignUp.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\StudyAdmin.xaml.cs">
-      <DependentUpon>StudyAdmin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Admin\StudyAdminStart.xaml.cs">
-      <DependentUpon>StudyAdminStart.xaml</DependentUpon>
     </Compile>
     <Compile Include="StudyX\StudyTopic.xaml.cs">
       <DependentUpon>StudyTopic.xaml</DependentUpon>
@@ -115,10 +119,18 @@
     <Compile Include="StartX\StartLearn.xaml.cs">
       <DependentUpon>StartLearn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Database\Task.cs" />
-    <Compile Include="Database\Topic.cs" />
-    <Compile Include="Database\User.cs" />
-    <Page Include="Admin\Admin.xaml">
+    <Compile Include="TaskQ.xaml.cs">
+      <DependentUpon>TaskQ.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Admin\TaskU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\TopicU.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Answer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,14 +166,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Admin\StudyAdmin.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Admin\StudyAdminStart.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="StudyX\StudyTopic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -179,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="StartX\StartLearn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TaskQ.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

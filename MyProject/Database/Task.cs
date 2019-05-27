@@ -1,4 +1,4 @@
-namespace MyProject
+namespace MyProject.Database
 {
     using System;
     using System.Collections.Generic;
@@ -13,10 +13,11 @@ namespace MyProject
 
         public string textTask { get; set; }
 
-        public string answer { get; set; }
+        [StringLength(100)]
+        public string answers { get; set; }
 
-        [StringLength(20)]
-        public string topicT { get; set; }
+        [StringLength(100)]
+        public string topic { get; set; }
 
         public virtual Topic Topic1 { get; set; }
     }

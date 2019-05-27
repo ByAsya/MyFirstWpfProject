@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using MyProject.Admin;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -64,42 +66,24 @@ namespace MyProject
                     {
                         ProfileId.mail = user.mail;
                         ProfileId.name = user.nameU;
-                        ProfileId.count = (int)user.points;
 
                         string mailAdmin = "sakunnastya28@gmail.com";
 
                         if (user.mail == mailAdmin)
-                        {
-                            TopicObject.adminName = user.mail;
-
-                            n.Icon.Kind = PackIconKind.BellOff;
-
-                            Admin admin = new Admin();
-                            Study study = new Study();
-                            StudyAdminStart studyA = new StudyAdminStart();
-
-
-                            n.AdminPage.Children.Clear();
-                            study.topics.Children.Clear();
-                            study.topics.Children.Add(studyA);
-                            n.AnotherPages.Children.Add(study);
-                            n.Admin.Children.Add(admin);
-                            w.Start.Children.Add(n);
-
-                            MainWindow window = (MainWindow)Application.Current.MainWindow;
-                            window.sign.Close();
+                        {                                                                                  
+                            TopicU admin = new TopicU();
+                            w.Start.Children.Add(admin);                            
                         }
 
                         else
                         {
                             n.AnotherPages.Children.Add(p);
                             w.Start.Children.Add(n);
-
-                            MainWindow window = (MainWindow)Application.Current.MainWindow;
-                            window.sign.Close();
+                            ProfileId.picture = user.pictureProfile;
                         }
 
-                        
+                        MainWindow window = (MainWindow)Application.Current.MainWindow;
+                        window.sign.Close();
                     }
                 }
 

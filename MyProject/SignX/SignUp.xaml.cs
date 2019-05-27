@@ -1,9 +1,11 @@
-﻿using System;
+﻿using MyProject.Database;
+using System;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
 using System.Windows;
 using System.Windows.Controls;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -46,12 +48,12 @@ namespace MyProject
                     {
                         if (Code.Text == code.ToString())
                         {
-                            User user = new User { mail = mail2.Text, nameU = name2.Text, passwordU = pass2.Password.GetHashCode().ToString(), pictureProfile="d", points=0, topic="пусто"};
+                            ProfileId.picture = "D:\\ООП\\MyProject\\MyProject\\pictures\\semin-intensive-english-course-nese.jpg";
+                            User user = new User { mail = mail2.Text, nameU = name2.Text, passwordU = pass2.Password.GetHashCode().ToString(), pictureProfile= ProfileId.picture, pointsOne=0, pointsTwo=0,pointsThree=0, pointsFour=0  };
                             userR.Create(user);
 
                             ProfileId.mail = user.mail;
                             ProfileId.name = user.nameU;
-                            ProfileId.count = (int)user.points;
                             ProfileId.password = user.passwordU;
 
                             MessageBox.Show("Регистрация выполнена успешно!");
@@ -79,7 +81,7 @@ namespace MyProject
         }
 
         public static Random rnd = new Random();
-        public int code = rnd.Next(0, 10);
+        public int code = rnd.Next(1000, 8000);
         private void Button_Click(object sender, RoutedEventArgs e)
         {           
 

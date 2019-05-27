@@ -1,4 +1,4 @@
-namespace MyProject
+namespace MyProject.Database
 {
     using System;
     using System.Collections.Generic;
@@ -11,22 +11,18 @@ namespace MyProject
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Topic()
         {
-            Users = new HashSet<User>();
+            Tasks = new HashSet<Task>();
         }
 
         [Key]
-        [StringLength(20)]
+        [StringLength(100)]
         public string nameTopic { get; set; }
 
         public string topicText { get; set; }
 
         public string exampleText { get; set; }
 
-        public int? taskCount { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<User> Users { get; set; }
-
         public virtual ICollection<Task> Tasks { get; set; }
     }
 }

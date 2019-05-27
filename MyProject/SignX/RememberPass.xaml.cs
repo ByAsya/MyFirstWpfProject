@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyProject.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -14,6 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -28,7 +30,7 @@ namespace MyProject
         }
 
         public static Random rnd = new Random();
-        public int code = rnd.Next(0, 10);
+        public int code = rnd.Next(1000, 8000);
         UserRepository userR = new UserRepository();
 
         private void GetPass_Click(object sender, RoutedEventArgs e)
@@ -87,7 +89,6 @@ namespace MyProject
 
                             ProfileId.mail = user.mail;
                             ProfileId.name = user.nameU;
-                            ProfileId.count = (int)user.points;
                             ProfileId.password = user.passwordU;
 
                             MainWindow window = (MainWindow)Application.Current.MainWindow;

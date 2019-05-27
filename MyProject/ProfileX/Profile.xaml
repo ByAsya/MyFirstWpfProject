@@ -29,17 +29,17 @@
             <ColumnDefinition Width="40"/>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.RowSpan="11" Fill="#dcc6b3" Opacity="0.7" Margin="0 0 0 -10"/>
+        <Rectangle Grid.Column="0" Grid.RowSpan="11" Fill="#dcc6b3" Opacity="0.7" Margin="0 0 0 -8"/>
         <Border Grid.RowSpan="3" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="130" Height="130">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\default_user_icon.jpg"/>
+                <ImageBrush  x:Name="picture" ImageSource="D:\ООП\MyProject\MyProject\pictures\default_user_icon.jpg"/>
             </Border.Background>
         </Border>
         <TextBlock Grid.Row="3" Name="name" TextAlignment="Center" FontSize="20" FontFamily="Verdana" Foreground="White" Height="30" VerticalAlignment="Top"/>
         <TextBlock Grid.Row="3" Name="mail" TextAlignment="Center" FontSize="16" FontFamily="Verdana" Foreground="White" Height="25" VerticalAlignment="Bottom"/>
         <materialDesign:PackIcon Kind="Teach" Grid.Row="5" Foreground="White" HorizontalAlignment="Left" Height="24" Width="20" VerticalAlignment="Center" Margin="36,10.6,0,15.8"/>
         <TextBlock Name="topics" Grid.Row="5" Text="Курсы: " Foreground="White" FontFamily="Verdana" FontSize="20" HorizontalAlignment="Center" Height="30" Margin="61,10.6,30.4,9.8" Width="99"/>
-        <Button Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Click="Redact_Click" Margin="0,0.2,0.4,49.4" Grid.RowSpan="2">
+        <Button Grid.Row="6" Background="Transparent" BorderBrush="Transparent" Click="Redact_Click" Margin="0,0,0.4,48" Grid.RowSpan="2">
             <Grid>
                 <materialDesign:PackIcon Kind="Pencil" Foreground="White" HorizontalAlignment="Left" Margin="10,0,0,-0.8" Grid.RowSpan="2" Height="24" Width="20"/>
                 <TextBlock Text="Настроить" Foreground="White" FontFamily="Verdana" FontSize="20" VerticalAlignment="Center" Margin="35 0 0 0"/>
@@ -58,7 +58,7 @@
             </Grid>
         </Button>
 
-        <Grid Name="Redact" Grid.RowSpan="11" Grid.Column="1" Margin="0 0 0 -10">
+        <Grid Name="Redact" Grid.RowSpan="11" Grid.Column="1" Margin="0 0 0 -8">
             <Grid.RowDefinitions>
                 <RowDefinition Height="30"/>
                 <RowDefinition Height="100"/>
@@ -80,13 +80,17 @@
 
             <Rectangle Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="5" Fill="White" Opacity="0.5"/>
             <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
-            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Очередь и Стек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Text="Очередь и Стек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Name="one" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Height="60" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0"/>
             <Rectangle Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
-            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Дерево и граф" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Text="Дерево и граф" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Name="two" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2" Height="60" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0"/>
             <Rectangle Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8"/>
-            <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Список и дек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Text="Список и дек" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Name="three" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Height="60" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0"/>
             <Rectangle Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="3" RadiusX="5" RadiusY="5" Fill="#dcc6b3" Opacity="0.8" Height="100"/>
-            <TextBlock Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Height="40" Text="Сортировки" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Grid.Row="7" Grid.RowSpan="2" Grid.Column="1" Grid.ColumnSpan="2" Height="30" Text="Сортировки" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top"/>
+            <TextBlock Name="four" Grid.Row="7" Grid.Column="1" Grid.ColumnSpan="2" Height="60" FontSize="20" FontFamily="Verdana" Foreground="White" TextAlignment="Center" VerticalAlignment="Top" Margin="0 30 0 0"/>
         </Grid>
     </Grid>
 </UserControl>

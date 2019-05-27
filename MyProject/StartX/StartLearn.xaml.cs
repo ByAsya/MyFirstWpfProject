@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using MyProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -52,9 +54,6 @@ namespace MyProject
                 }
 
             }
-
-            Sign sign = new Sign();
-            sign.Show();
 
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.Start.Children.Clear();
@@ -109,6 +108,7 @@ namespace MyProject
 
         private void QS_Click(object sender, RoutedEventArgs e)
         {
+            DataObjects.nameTopic = "Стеки и очереди";
             Study st = new Study();
             Block.Children.Clear();
             AnotherPages.Children.Clear();
@@ -118,19 +118,18 @@ namespace MyProject
             StudyTopic ql = new StudyTopic();
             st.topics.Children.Clear();
 
-            TopicObject.name = "Один";
-            TopicObject.text = "ТекстОдин";
-            TopicObject.example = "Пример1";
-            TopicObject.task = "Задание1";
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;
+            ql.TextName.Text = topic.nameTopic;
+            ql.Text.Text = topic.topicText;
 
             st.topics.Children.Add(ql);
         }
 
         private void TG_Click(object sender, RoutedEventArgs e)
         {
+            DataObjects.nameTopic = "Деревья и графы";
             Study st = new Study();
             Block.Children.Clear();
             AnotherPages.Children.Clear();
@@ -140,13 +139,11 @@ namespace MyProject
             StudyTopic ql = new StudyTopic();
             st.topics.Children.Clear();
 
-            TopicObject.name = "Два";
-            TopicObject.text = "ТекстДва";
-            TopicObject.example = "Пример2";
-            TopicObject.task = "Задание2";
+            TopicRepository topicQ = new TopicRepository();
+            var topic = topicQ.Get(DataObjects.nameTopic);
 
-            ql.TextName.Text = TopicObject.name;
-            ql.Text.Text = TopicObject.text;
+            ql.TextName.Text = topic.nameTopic;
+            ql.Text.Text = topic.topicText;
 
             st.topics.Children.Add(ql);
         }

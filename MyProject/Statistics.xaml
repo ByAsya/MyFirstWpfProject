@@ -26,31 +26,31 @@
         <Rectangle Grid.ColumnSpan="4" Grid.Row="0" Grid.RowSpan="4" Fill="White" Opacity="0.5" Margin="0,0,0,-8"/>
         <Border Grid.Row="1" Grid.Column="1" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,0,0,0">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+                <ImageBrush x:Name="oneP" ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
             </Border.Background>
         </Border>
         <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="80" Width="400" VerticalAlignment="Top" Margin="0,0,60,0" Fill="#dcc6b3" Opacity="0.8" RadiusX="5" RadiusY="5"/>
-        <TextBlock Name="Top1" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,10,60,0"/>
+        <TextBlock FontFamily="Verdana" Foreground="White" FontSize="16" Name="Top1" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,10,60,0"/>
         <Border Grid.Row="1" Grid.Column="1" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="80" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,25">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+                <ImageBrush x:Name="twoP" ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
             </Border.Background>
         </Border>
         <Rectangle Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="80" Width="400" VerticalAlignment="Bottom" Margin="0,0,60,25" Fill="#dcc6b3" Opacity="0.8" RadiusX="5" RadiusY="5"/>
-        <TextBlock Name="Top2" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Bottom" Margin="0,0,60,35"/>
+        <TextBlock FontFamily="Verdana" Foreground="White" FontSize="16" Name="Top2" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Bottom" Margin="0,0,60,35"/>
         <Border Grid.Row="2" Grid.Column="1" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="80" Height="80" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="0,10,0,0">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+                <ImageBrush x:Name="threeP" ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
             </Border.Background>
         </Border>
         <Rectangle Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="80" Width="400" VerticalAlignment="Top" Margin="0,10,60,0" Fill="#dcc6b3" Opacity="0.8" RadiusX="5" RadiusY="5"/>
-        <TextBlock Name="Top3" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,20,60,0"/>
+        <TextBlock FontFamily="Verdana" Foreground="White" FontSize="16" Name="Top3" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,20,60,0"/>
         <Border Grid.Row="2" Grid.Column="1" CornerRadius="80" BorderThickness="2" BorderBrush="White" Width="80" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="0,0,0,20">
             <Border.Background>
-                <ImageBrush ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
+                <ImageBrush x:Name="fourP" ImageSource="D:\ООП\MyProject\MyProject\pictures\semin-intensive-english-course-nese.jpg"/>
             </Border.Background>
         </Border>
         <Rectangle Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="80" Width="400" VerticalAlignment="Top" Margin="0,125,60,0" Fill="#dcc6b3" Opacity="0.8" RadiusX="5" RadiusY="5"/>
-        <TextBlock Name="Top4" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,135,60,0"/>
+        <TextBlock FontFamily="Verdana" Foreground="White" FontSize="16" Name="Top4" Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Height="60" Width="300" VerticalAlignment="Top" Margin="0,135,60,0"/>
     </Grid>
 </UserControl>

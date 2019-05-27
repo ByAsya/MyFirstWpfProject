@@ -6,10 +6,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MyProject"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="760">
-
-
-
+             d:DesignHeight="550" d:DesignWidth="760"
+             Loaded="UserControl_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="70"/>
@@ -61,19 +59,7 @@
 
         <Grid Name="topics" Grid.RowSpan="12" Grid.Column="1" Margin="0 0 0 -8">
             <ScrollViewer>
-                <TextBlock TextWrapping="Wrap" FontSize="20">
-                    ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    <LineBreak/>
-                    sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss
-                </TextBlock>
+                <TextBlock Name="startTopic" TextWrapping="Wrap" FontSize="20"/>
             </ScrollViewer>
         </Grid>
     </Grid>

@@ -12,5 +12,6 @@ namespace MyProject
         public static string name { get; set; }
         public static int count { get; set; }
         public static string password { get; set; }
+        public static string picture { get; set; } 
     }
 }

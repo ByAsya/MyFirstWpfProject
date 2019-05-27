@@ -6,10 +6,10 @@ create table Tasks
 	nameTask int identity(1,1) constraint nameTask_PK primary key(nameTask),
 	textTask nvarchar(max),
 	answers nvarchar(100),
-	topicÅ nvarchar(20) constraint topicÅ_FK foreign key(topicÅ) references Topics(nameTopic)
+	topicT nvarchar(20) constraint topicÅ_FK foreign key(topicT) references Topics(nameTopic)
 )
 
-drop table Users
+drop table Tasks
 create table Topics
 (
 	nameTopic nvarchar(20) constraint nameT_PK primary key(nameTopic),
@@ -24,11 +24,14 @@ create table Users
 	pictureProfile nvarchar(100) default 'D:\ÎÎÏ\MyProject\MyProject\pictures\default_user_icon.jpg',
 	nameU nvarchar(20) not null,
 	passwordU nvarchar(10) not null,
-	topic nvarchar(20) constraint topic_FK foreign key(topic) references Topics(nameTopic),
+	topic nvarchar(20) constraint topic_FK foreign key(topic) references Topics(nameTopic) default 'ïóñòî',
 	points int default 0
 )
 
-select * from Users
+select * from Topics
+delete Topics where topicText='ñ'
 
-drop table Tasks
+insert Topics values ('ïóñòî', 'ïóñòî','ïóñòî',0)
+
+drop table Users
 delete Users where mail='sakunnastya28@gmail.com'

@@ -1,4 +1,5 @@
 ﻿using MaterialDesignThemes.Wpf;
+using MyProject.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static MyProject.Database.Data;
 
 namespace MyProject
 {
@@ -34,8 +36,18 @@ namespace MyProject
             string[] chekS = Mail.Split(new char[] { '@'});
 
             mail.Text = chekS[0];
-            name.Text = ProfileId.name;
-            topics.Text+= ProfileId.count.ToString();
+
+            UserRepository userR = new UserRepository();
+            var user=userR.Get(Mail);
+            name.Text = user.nameU;
+            DataObjects.taskCount = (int)(user.pointsOne + user.pointsThree + user.pointsTwo + user.pointsFour);
+            topics.Text+=DataObjects.taskCount.ToString();
+            picture.ImageSource = new BitmapImage(new Uri(ProfileId.picture,UriKind.Relative));
+
+            one.Text = "Ваши баллы: " + user.pointsOne;
+            two.Text = "Ваши баллы: " + user.pointsTwo;
+            three.Text = "Ваши баллы: " + user.pointsThree;
+            four.Text = "Ваши баллы: " + user.pointsFour;
         }
 
 
@@ -83,10 +95,7 @@ namespace MyProject
                 }
                 
             }
-
-            Sign sign = new Sign();
-            sign.Show();
-
+            
             MainWindow window = (MainWindow)Application.Current.MainWindow;
             window.Start.Children.Clear();
         }
